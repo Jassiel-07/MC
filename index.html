@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CTAcords</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 1px solid #444;
+    }
+
+    h1 {
+      font-family: 'Monoton', cursive;
+      font-size: 3em;
+      color: #ff4081;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 100px);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn {
+      margin: 15px;
+      padding: 12px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      background: #ff4081;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #ff4081aa;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #ff4081;
+      box-shadow: 0 0 20px #ff4081;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .logo {
+      font-size: 1.1em;
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+    .intro {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      color: #ffcad4;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musi.mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <header>
+    <h1>CTAcords</h1>
+    <div class="logo">Cultura Tumbada Auténtica</div>
+  </header>
+
+  <div class="container">
+    <div class="intro">Hola, aquí tienes acordes, tabs y letras para tus CT</div>
+    <button class="btn" onclick="window.location.href='artistas.html'">Artistas</button>
+    <button class="btn" onclick="window.location.href='peticion.html'">¿Tu canción no está?</button>
+    <button class="btn" onclick="window.location.href='nosotros.html'">Sobre Nosotros</button>
+  </div>
+
+</body>
+</html>

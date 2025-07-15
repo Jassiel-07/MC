@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>En La Peda - Junior H</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff69b4;
+      text-shadow: 2px 2px 5px #ff69b4;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff69b4;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff69b4;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff69b4;
+      color: #000;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #1f1f1f;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+    }
+    .acordes-img {
+      max-width: 180px;
+      margin: 15px 10px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>En La Peda - Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2>Acordes</h2>
+    <p>Progresión base:</p>
+    <pre>
+F   A7   Dm   C   Bb   Bbm
+    </pre>
+    <div class="imagenes-container">
+      <div><p>F</p><img src="img/f.jpg" alt="Acorde F" class="acordes-img"></div>
+      <div><p>A7</p><img src="img/a7.jpg" alt="Acorde A7" class="acordes-img"></div>
+      <div><p>Dm</p><img src="img/dm.jpg" alt="Acorde Dm" class="acordes-img"></div>
+      <div><p>C</p><img src="img/c.jpg" alt="Acorde C" class="acordes-img"></div>
+      <div><p>Bb</p><img src="img/bb.jpg" alt="Acorde Bb" class="acordes-img"></div>
+      <div><p>Bbm</p><img src="img/bbm.jpg" alt="Acorde Bbm" class="acordes-img"></div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Acordes según Chordify y AcordesWeb 1.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2>Letra con acordes</h2>
+    <pre>
+[Intro x2]
+F   A7   Dm   C   Bb   Bbm
+
+F
+Mis compas en la peda
+A7
+Ellos no creen que olvidarte pueda
+Dm
+Y siento que sí es cierto
+C         Bb   Bbm
+Creo que les creo
+
+F
+Tú estás como si nada
+A7
+Según ya tú estás acostumbrada
+Dm
+Que ya ni me recuerdas
+C         Bb   Bbm
+Que hasta mi humor te llevas
+
+F        A7
+No queda más que aceptar
+Dm    C     Bb     Bbm
+Que en mi vida ya no estás
+
+F
+Mesero, porfa, traiga otra botella
+A7
+Pa’ ver si en esta ya me olvido de ella
+Dm
+Chingo de viejas conocen mi cama
+C         Bb   Bbm
+Y al sordo no sé ni cómo se llaman
+
+F
+Qué factura les dejaste tan cara
+A7
+Pobrecitas, las dejé bien dañadas
+Dm
+Bien pedo me entró la de ir por la luna
+C        Bb      Bbm
+Pero solo hay una y bien sabes que es tuya, bebé
+
+[Interludio]
+F   A7   Dm   C   Bb   Bbm
+
+F
+Y en verdad, aunque duela
+A7
+Que te ame como yo, no habrá quien pueda
+Dm
+Y de esos estoy seguro
+C       Bb     Bbm
+Mi amor, yo te lo juro
+
+F
+Por eso soy borracho
+A7
+Antes de ti yo sí era buen muchacho
+Dm
+Dime lo que me has hecho
+C         Bb   Bbm
+Mi cora está deshecho
+
+F
+Mesero, porfa, traiga otra botella
+A7
+Pa’ ver si en esta ya me olvido de ella
+...
+    </pre>
+    <p style="font-size:0.9em; color:#bbb;">
+      Letra y acordes transcritos de AcordesWeb 2.
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

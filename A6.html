@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Cuerno – Junior H</title>
+  <style>
+    body {
+      background-color: #2a0a3a;
+      color: #f5e6f6;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ff66b2;
+      text-shadow: 2px 2px 4px #660033;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      border-bottom: 2px solid #ff66b2;
+    }
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      color: #ff66b2;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff66b2;
+      color: #2a0a3a;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #2a0a3a;
+      margin: 20px auto;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff66b2;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      color: #f5e6f6;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff66b2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mi Cuerno – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff66b2;">Acordes</h2>
+    <p>Progresión principal (intro, versos, solo):</p>
+    <pre>
+Bbm   C#   G#   Eb
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">Bbm</p>
+        <img src="img/asm.jpg" alt="Acorde Bbm" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">C#</p>
+        <img src="img/cs.jpg" alt="Acorde C#" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">G#</p>
+        <img src="img/g.jpg" alt="Acorde G#" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">Eb</p>
+        <img src="img/ds.jpg" alt="Acorde Eb" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Acordes extraídos del PDF en Scribd y adaptados para guitarra.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff66b2;">Letra con acordes</h2>
+    <pre>
+[Intro]
+Bbm   C#   G#   Eb
+
+[Verso 1]
+Bbm
+Baby, mi cuerno ahora está triste
+C#
+El polvo blanco ya ni me sirve
+G#
+Solo tiro el dinero en cualquier congal
+Eb
+Pero ninguna me gusta, esto está fatal
+
+Bbm
+Los corridos que descargaste
+C#
+En mi celular ya no van a activarme
+G#
+Ni a eras cualquiera, yo voy a enamorarme
+Eb
+Pero vuelve a bailar como se siente, dale
+
+[Estribillo]
+Bbm
+Mi cuerno te extraña, mami
+C#               G#
+Por favor ya dile que vuelves
+Eb
+Porque se hace tarde
+Bbm
+Mi cuerno te extraña, mami
+C#               G#
+Y aunque ya varias le han calado
+Eb
+No encuentra reemplazo y solo llora
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

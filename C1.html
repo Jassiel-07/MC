@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Atrapado En Un Sueño – Junior H</title>
+  <style>
+    body {
+      background-color: #0a0f2f;
+      color: #e0e7ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #60a5fa;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000a1a;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #60a5fa;
+      margin-bottom: 30px;
+    }
+
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #a5b4fc;
+      transition: 0.3s;
+    }
+
+    .tab.active, .tab:hover {
+      background-color: #60a5fa;
+      color: #0a0f2f;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background-color: #121d5a;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #60a5fa;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #e0e7ff;
+    }
+
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #60a5fa;
+    }
+
+    .imagenes-container p {
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Atrapado En Un Sueño – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#60a5fa;">Acordes</h2>
+    <pre>
+Cm7
+Gm
+
+(Progresión repetida durante toda la canción)
+    </pre>
+
+    <div class="imagenes-container">
+      <div>
+        <img src="img/cm7.jpg" alt="Acorde Cm7" class="acordes-img">
+        <p>Cm7</p>
+      </div>
+      <div>
+        <img src="img/gm.jpg" alt="Acorde Gm" class="acordes-img">
+        <p>Gm</p>
+      </div>
+    </div>
+
+    <p style="font-size: 0.9em; color: #a5b4fc; margin-top: 20px;">
+      Acordes para guitarra estilo corrido tumbado.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display: none;">
+    <h2 style="color:#60a5fa;">Letra con acordes</h2>
+<pre>
+Cm7
+Estoy atrapado
+Gm
+En un sueño, un sueño muy raro
+Cm7
+Ando volando
+Gm
+Y no es por la hierba de anteaños
+Cm7
+No sé dónde ando
+Gm
+Pero me siento seguro extraño
+Cm7
+Me siento bien
+Gm
+Porque aquí no existe ni un ser
+Cm7
+Que me haga daño
+Gm
+A la vez no quiero despertar
+Cm7
+Quiero andar volando
+Gm
+Lejos, lejos de la realidad
+
+Estribillo:
+Cm7
+Y no quiero bajar
+Gm
+Me dañas el corazón
+Cm7
+De mi pecho apretado
+Gm
+Las mujeres ya no aman
+Cm7
+Prefiero andar marihuano
+Gm
+Y no bajar del volado
+Cm7
+Sombras extrañas
+Gm
+Que me impiden que me vaya
+</pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Rambo El Apodo – Junior H</title>
+  <style>
+    body {
+      background: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #555;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Rambo El Apodo – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+Fm    Gm    Cm
+Fm    Gm    Cm
+
+(Esa progresión se repite durante toda la canción)
+    </pre>
+    <p style="font-style:italic; color:#888;">
+      Acordes confirmados por CifraClub y Chordify – Tonalidad: Fa menor
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+Una Jeep pixeleada va, allá por Mazatlán
+Lugar de crianza, pa' su estancia fue la Culiacán
+Donde los gallos crecen, Sinaloa
+Es el estado donde viene mi sangre letal
+
+De morro nunca hubo una necesidad
+Para meterme en donde ando no se ocupa la
+La vagancia, de calle es mi identidad
+De ahí fui aprendiendo de lo bueno y también de lo mal
+
+Detrás torretas lejos se ve brillar
+El compa Winni listo pa' lo que se arme, carnal
+Las armas que son pa' su debilidad
+Solo se cuida, no la luce saber para usar
+
+En la sierrita el camouflage
+Se la navega pa' chambear
+Las claves radios sonarán
+Saludos Tony y su carnal
+
+Ahí le va, compa' Rambito
+Hasta Sinaloa
+Uh
+
+Seis años creció junto a un animal
+Pero un día amaneció, ya saben, sin vida
+Rambo el apodo del gato pa' aclarar
+Se hizo el Junior, Rambito les voy a presentar
+
+Para el sol usa unos lentes de Versace
+Y pa' pistear Hennessy frío y hace un buen coñac
+Las morras que sean, porfa, de Mazatlán
+Enamorado y bien joven la vida disfruta
+
+Saludos, se va listo para chambear
+La pixealada ya está lista para ruletear
+Ya va llegando al malecón
+Ya se jalaron un bandón
+Que retumbe ese corridón
+De respeto es el chavalón
+</pre>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

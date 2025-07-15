@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <title>El Chachito Anda Alegre – Junior H</title>
+  <style>
+    body {
+      background: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #555;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>El Chachito Anda Alegre – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+Bm    1 tiempo
+A     1 tiempo
+G     1 tiempo
+D     1 tiempo
+F#m   1 tiempo
+    </pre>
+    <p style="font-style:italic; color:#888;">
+      Progresión confirmada por Chordify y ChordU 1.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+[Intro]
+D  A  Bm  F#m  G  A
+
+D
+Anda alegre la plebada, así lo dice el viejón
+A
+De un ranchito de Guasave vengo yo
+Bm               F#m
+Y lo que soñaba un día tiene hoy
+G               A
+Con morritas colombianas se encerró
+
+D
+Con su gente por un lado, andan listos pa’ tomar
+A
+Y sus primos ni se digan, ahí nomás
+Bm               F#m
+Tocan los del Villa y va saliendo el sol
+G               A
+Es señal que anda contento el chavalón
+
+D
+Mis viejitos y mis padres, gente de mucho valor
+A
+Qué bien queman las llantas del Marquisón
+Bm               F#m
+Los regaños y consejos del viejón
+G               A
+Con respeto, por eso salí cabrón
+
+[Repite acorde progression]
+
+D
+Me miran, los miro; respetan, respeto
+A
+Vinimos de abajo y la meta es el cielo
+Bm               F#m
+Un acento fuerte y sangre sinaloense
+G               A
+De una cuna humilde el chavalo proviene
+
+D
+Así como llegan las pacas, se van
+A
+Compadre Gabino no puede contar
+Bm               F#m
+No olvida el pasado mi compa’ El Chachito
+G               A
+Tal vez sin un peso, pero con amigos
+
+[Verso adicional]
+
+D
+Pa’ los blancos tira agüito, Platanitos, son ranchos
+A
+Un ceviche con los plebes pa’l calor
+Bm               F#m
+Borrego, tráete unas plebes pa’ bailar
+G               A
+Y con El Pato historias hay pa’ contar
+
+D
+Si se le suben los tragos se me pone a recordar
+A
+De unos amigos que ahorita ya no están
+Bm               F#m
+Si andas recio, recio acabas, no hay pa’ más
+G               A
+Pa’ que le lave se le extraña, carnal
+
+Pasa la misma progresión para el resto de la letra...
+</pre>
+    <p style="font-style:italic; color:#888;">
+      Letra extraída y adaptada de Cifra Club 2.
+    </p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

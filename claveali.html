@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clave Ali – Junior H</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #555;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      line-height: 1.5em;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+    }
+    .imagenes-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .acorde {
+      text-align: center;
+    }
+    .acorde img {
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clave Ali – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+Gm     1 tiempo
+Dm7    1 tiempo
+Cm7    2 tiempos
+A#     2 tiempos
+    </pre>
+    <div class="imagenes-container">
+      <div class="acorde">
+        <p>Gm</p>
+        <img src="img/gm.jpg" alt="Acorde Gm" />
+      </div>
+      <div class="acorde">
+        <p>Dm7</p>
+        <img src="img/dm7.jpg" alt="Acorde Dm7" />
+      </div>
+      <div class="acorde">
+        <p>Cm7</p>
+        <img src="img/cm7.jpg" alt="Acorde Cm7" />
+      </div>
+      <div class="acorde">
+        <p>A#</p>
+        <img src="img/asharp.jpg" alt="Acorde A#" />
+      </div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+[Intro]
+Gm   Dm7   Cm7   A#
+
+Gm
+800 días bastaron pa'
+Dm7
+Pa' cambiar mi vida
+Cm7
+De abajo pa' arriba
+A#
+Solo la miré pasar
+
+Gm
+De la sierra, allá por Michoacán
+Dm7
+Sangre de mis padres
+Cm7
+Lo más importante
+A#
+Primero la familia
+
+Gm
+7-1-4, mi Santa Ana
+Dm7
+Calles de Califas
+Cm7
+Ali está en la cima
+A#
+Y nadie lo puede tumbar
+
+Gm
+Llegan las pacas, mínimo son 200
+Dm7
+Brillo 'onde quiera, nuevecito el Mercedón
+Cm7
+Saludos pa' Ivy que por mí también brincó
+A#
+No es por alzarme, pero soy la conexión
+
+[REQUINTO]
+Cm7 – Dm7 – Gm
+
+Gm
+Una estrella gigante se ve
+Dm7
+Es la de mi equipo
+Cm7
+Al pecho me da brillo
+A#
+Represento, estoy al cien
+
+Gm
+Chavalo del año '92
+Dm7
+Pa' que no me cuenten
+Cm7
+También sé moverme
+A#
+Traigo huevos de toro
+
+Gm
+7-1-4, mi Santa Ana
+Dm7
+Calles de Califas
+Cm7
+Ali está en la cima
+A#
+Y nadie lo puede tumbar
+
+Gm
+Llegan las pacas, mínimo son 200
+Dm7
+Brillo 'onde quiera, nuevecito el Mercedón
+Cm7
+Voy pa' adelante, pa' atrás ni va el más menso
+A#
+Pa' conectarte en caliente hago un llamadón
+</pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

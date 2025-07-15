@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Serpiente - Junior H</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff69b4;
+      text-shadow: 2px 2px 5px #ff69b4;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff69b4;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff69b4;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff69b4;
+      color: #000;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #1f1f1f;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+    }
+    .acordes-img {
+      max-width: 180px;
+      margin: 15px 10px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Serpiente - Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2>Acordes</h2>
+    <p>Patrón base para la canción (tono original: Fm):</p>
+    <pre>
+Intro / Verso / Coro:
+Fm  Cm  Bbm  Cm
+    </pre>
+    <div class="imagenes-container">
+      <div><p>Fm</p><img src="img/fm.jpg" alt="Acorde Fm" class="acordes-img"></div>
+      <div><p>Cm</p><img src="img/cm.jpg" alt="Acorde Cm" class="acordes-img"></div>
+      <div><p>Bbm</p><img src="img/bbm.jpg" alt="Acorde Bbm" class="acordes-img"></div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      .
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2>Letra con acordes</h2>
+    <pre>
+[Intro x2]
+Fm  Cm  Bbm  Cm
+
+[Verso 1]
+Fm
+Te miento si te digo que
+Cm
+no quiero ver de nuevo ese lunar
+Bbm
+Supongo que no soy el único
+Cm
+que sabe bien en dónde está
+
+Fm
+Tapémonos los ojos
+Cm
+y apaguemos esas luces de una vez
+Bbm
+Trata de hacerme perderme
+Cm
+en tu cuerpo que yo conozco al revés
+
+Fm
+Tú eres una serpiente
+Cm                      Bbm
+que me ahoga y que no me deja ni respirar
+Cm
+Quiero desenvolverme,
+Fm
+que tú sepas quién yo soy en realidad
+Cm                      Bbm
+Olvidemos con quién estuvo cada uno en el ayer
+C7
+Si tenemos las ganas, anda,
+Fm
+dale, mami, porfa, de una vez
+Cm
+Que me acojas en esos brazos
+Bbm
+Dime que lo malo va a pasar
+C7
+Y en tus peores momentos
+Fm
+te prometo que también voy a estar
+Cm      Bbm
+Ah, ah, ah-ah-ah
+C7
+Ah-ah-ah-ah
+
+[Intro x2]
+(repite misma progresión)
+
+[Verso 2:]
+Fm
+Tú eres peligrosa
+Cm
+como la marea y las olas del mar
+Bbm
+Cualquier hombre que esté contigo
+Cm
+en esta vida vas a lastimar
+
+Fm
+La oportunidad de estar juntos
+Cm
+se fue, creo que nunca volverá
+Bbm                     C7
+Pero la conexión que tenemos,
+Fm
+no niegues, sé que aún está
+
+Fm
+Tú eres una serpiente
+Cm                      Bbm
+que me ahoga y que no me deja ni respirar
+Cm
+Quiero desenvolverme,
+Fm
+que tú sepas quién yo soy en realidad
+Cm                      Bbm
+Olvidemos con quién estuvo cada uno en el ayer
+C7
+Si tenemos las ganas, anda,
+Fm
+dale, mami, porfa, de una vez
+Cm
+Que me acojas en esos brazos
+Bbm
+Dime que lo malo va a pasar
+C7
+Y en tus peores momentos
+Fm
+te prometo que también voy a estar
+Cm      Bbm
+Ah, ah, ah-ah-ah
+C7
+Ah-ah-ah-ah-ah
+    </pre>
+    <p style="font-size:0.9em; color:#bbb;">
+       2.
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

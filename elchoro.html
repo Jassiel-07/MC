@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El Chorro – Junior H</title>
+  <style>
+    body {
+      background-color: #0a1a2a;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffa500;
+      text-shadow: 2px 2px 5px #002244;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffa500;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ffa500;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover,
+    .tab.active {
+      background-color: #ffa500;
+      color: #002244;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #002244;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      color: #e6e6e6;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>El Chorro – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra con acordes</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <p>Progresión principal:</p>
+    <pre>
+Fm7   A#m   D#   G#
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">Fm7</p><img src="img/fm7.jpg" alt="Acorde Fm7" class="acordes-img"></div>
+      <div><p style="text-align:center;">A#m</p><img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img"></div>
+      <div><p style="text-align:center;">D#</p><img src="img/ds.jpg" alt="Acorde D#" class="acordes-img"></div>
+      <div><p style="text-align:center;">G#</p><img src="img/gs.jpg" alt="Acorde G#" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ffa500;">Letra con acordes</h2>
+    <pre>
+[Intro]
+Fm7   A#m   D#   G#
+
+[Verso 1]
+Fm7             A#m
+El chorro llegó y nadie lo vio,
+D#              G#
+Por las calles la historia cambió,
+Fm7             A#m
+Nadie entiende por qué pasó,
+D#              G#
+Pero la vida así se vivió.
+
+(repite progresión)
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hey CJ – Junior H ft. Compa Steve | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('img/musica.jpg') center/cover no-repeat fixed;
+      color: #003f3f;
+      text-align: center;
+      padding: 20px;
+      background-blend-mode: multiply;
+      background-color: #9ad1e5;
+    }
+    header {
+      height: 200px;
+    }
+    h1 {
+      margin: 20px 0;
+      font-size: 2.5em;
+      color: #e6f9ff;
+      text-shadow: 1px 1px 6px #005050;
+      background-color: rgba(0, 102, 102, 0.7);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 15px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+    .tabs button {
+      background: #b3e0ffcc;
+      color: #003f3f;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 1px 2px 5px rgba(0, 63, 63, 0.4);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .tabs button.active,
+    .tabs button:hover {
+      background: #008080;
+      color: #e6f9ff;
+      box-shadow: 0 0 10px #00b3b3aa;
+    }
+    .tab-content {
+      background: rgba(230, 249, 255, 0.95);
+      padding: 25px;
+      border-radius: 0 15px 15px 15px;
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: left;
+      white-space: pre-wrap;
+      color: #003f3f;
+      box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+      font-weight: 500;
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+    pre {
+      background: #ccf0ff;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 1.05em;
+      color: #004d4d;
+      overflow-x: auto;
+      box-shadow: inset 0 0 5px #008080;
+    }
+    .acordes-imgs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .acordes-imgs div {
+      text-align: center;
+      width: 120px;
+    }
+    .acordes-imgs img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 128, 128, 0.5);
+      border: 2px solid #008080;
+    }
+    .acordes-imgs p {
+      margin-top: 8px;
+      font-weight: 600;
+      color: #004d4d;
+    }
+  </style>
+</head>
+<body>
+
+  <header></header>
+  <h1>Hey CJ – Junior H ft. Compa Steve</h1>
+
+  <div class="tabs">
+    <button class="active" onclick="showTab('acordes')">Acordes</button>
+    <button onclick="showTab('letra')">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <p>Progresión completa:</p>
+    <pre>
+Cm7 – 1 tiempo  
+B   – 1 tiempo  
+Em7 – 2 tiempos  
+(repetir 2 veces)
+
+C   – 1 tiempo  
+D   – 2 tiempos  
+Em7 – 1 tiempo  
+C   – 1 tiempo  
+D   – 1 tiempo  
+Em7 – 2 tiempos  
+C   – 1 tiempo  
+D   – 1 tiempo  
+Em7 – 2 tiempos  
+Cm7 – 1 tiempo  
+D   – 1 tiempo  
+Em7 – 1 tiempo
+    </pre>
+
+    <div class="acordes-imgs">
+      <div><img src="img/acordes/cm7.jpg" alt="Cm7"><p>Cm7</p></div>
+      <div><img src="img/acordes/b.jpg" alt="B"><p>B</p></div>
+      <div><img src="img/acordes/Em7.jpg" alt="Em7"><p>Em7</p></div>
+      <div><img src="img/acordes/c.jpg" alt="C"><p>C</p></div>
+      <div><img src="img/acordes/d.jpg" alt="D"><p>D</p></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+Guadala', la tierra que me va  
+Nació para mandar, carros del año trae  
+Rojita la Rubicon larga,  
+Monta y para dunear  
+Bien levantada está  
+Lo conocen por CJ, eh eh eh  
+Y aún anda por un freeway, eh eh eh  
+No diré pa' dónde va, nah ah ah ah  
+No se los puedo contar  
+La vida hay que disfrutar  
+Ya las llantas se ven quemar  
+Hay un mentado SRT  
+Por La Angelina lo han de ver  
+Ay yo  
+Puro Arte Mata, compa Junior  
+Compa Steve  
+Y sigue la mata dando, viejo  
+De barba y un tape de rosa  
+No se vaya a enredar por su seguridad  
+Mi esposa, mi niño y mi niña  
+Rico por ellos soy, abuela te adoro  
+Gucci porta el chavalón, ó-ó-ón  
+Siempre con él un flotón, ó-ó-ón  
+Son puros morros de acción, ó-ó-ón  
+Que se prenden en calor  
+Se empina su Buchanón, oh oh oh  
+Si anda de party el viejón, oh oh oh  
+Sus lujos siempre se da, ah ah ah  
+Hoy es buen día para tomar  
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.getElementById('letra').style.display = id === 'letra' ? 'block' : 'none';
+      document.getElementById('acordes').style.display = id === 'acordes' ? 'block' : 'none';
+      const buttons = document.querySelectorAll('.tabs button');
+      buttons.forEach(b => b.classList.toggle('active', b.textContent.toLowerCase() === id));
+    }
+  </script>
+
+</body>
+</html>

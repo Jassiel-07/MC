@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Se Amerita – Junior H</title>
+  <style>
+    body {
+      background: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #555;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+    }
+    .imagenes-acordes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .imagenes-acordes div {
+      text-align: center;
+    }
+    .imagenes-acordes img {
+      max-width: 120px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+    .imagenes-acordes p {
+      margin-top: 8px;
+      color: #bbb;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Se Amerita – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+D       E7      F#m7
+    </pre>
+
+    <div class="imagenes-acordes">
+      <div>
+        <img src="img/d.jpg" alt="Acorde D" />
+        <p>D</p>
+      </div>
+      <div>
+        <img src="img/e7.jpg" alt="Acorde E7" />
+        <p>E7</p>
+      </div>
+      <div>
+        <img src="img/fsm7.jpg" alt="Acorde F#m7" />
+        <p>F#m7</p>
+      </div>
+    </div>
+
+    <p style="font-style:italic; color:#888;">
+      Tonalidad: La (A) – BPM aproximado: 107
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+[D]Y el cielo tocar,
+una Cessna pa' pilotear  
+[E7]Y en un Razersón 
+pa' las rutas, un polvaderón  
+[F#m7]Y un buen caballón
+pa' pasear a una dama que traigo yo  
+[D]La banda llegó y  
+[E7]mi compadrito ya se enfiestó  
+
+[E7]Claro que se amerita, 
+en mi rostro una sonrisa  
+[F#m]La mala racha pasó  
+[E7]Claro que se amerita
+festejar por esta vida  
+[F#m]Saludos para el señor  
+[D]Vallarta y Culichi y Tijuana pa' dar el rol  
+
+[D]Junto a mi carnal,
+no es de sangre, pero demostró lealtad  
+[E7]Y eso vale más
+que hablar y cuando toca echarse pa' atrás  
+[F#m7]Y en un Rubicon,
+mejor duro para cualquier situación  
+[D]Por ahí andan dos 
+que me cuidan y me brindan protección  
+
+[E7]Claro que se amerita,
+en mi rostro una sonrisa  
+[F#m]La mala racha pasó  
+[E7]Claro que se amerita
+festejar por esta vida  
+[F#m]Saludos para el señor  
+[D]Vallarta y Culichi y Sonora pa' dar el rol  
+</pre>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

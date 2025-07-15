@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Libros y Libretas – Junior H y Ovi</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #555;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      line-height: 1.5em;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+    }
+    .imagenes-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .acorde {
+      text-align: center;
+    }
+    .acorde img {
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Libros y Libretas – Junior H y Ovi</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+C#m7    1 tiempo
+F#      1 tiempo
+A#m     2 tiempos
+    </pre>
+    <div class="imagenes-container">
+      <div class="acorde">
+        <p>C#m7</p>
+        <img src="img/csm7.jpg" alt="Acorde C#m7" />
+      </div>
+      <div class="acorde">
+        <p>F#</p>
+        <img src="img/fs.jpg" alt="Acorde F#" />
+      </div>
+      <div class="acorde">
+        <p>A#m</p>
+        <img src="img/asm.jpg" alt="Acorde A#m" />
+      </div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+Hoy vendimos cien libretas, no eran de papel
+Hoy quiero sentirme libre, preso la perrié
+La rueda sigue girando porque pa eso es
+Muchas paca' en el changarro, siempre marcha al cien
+Y así nomás
+Me la navego en el filo de la navaja siempre y no resbalo
+Y quieren tumbar
+Y a mí no saben que traigo un equipo
+Con los palos y si hay que jalar yo jalo
+Libros y libretas, metralletas de las buenas
+Pa'l que se quiera meter, tenemos pa responder
+Cumplimos las metas sin tener que ir a la escuela
+Que yo nunca iba a poder, decían en el ayer, yo'
+Y así suena, y así suena el Ovi, pa' (¡uh-uh!)
+Compita Ovi
+Puros corridos tumbados (¡uh!)
+¡Que suene macizo, viejo!
+Rancho Humilde
+Papelitos azulitos, aquí no hay verdes
+Puro Franklin nuevecito de el USA
+Florecitas verdecitas porque siento estrés
+El que es perico dondequiera va a ser verde
+Nunca jamás te confíes de nadie
+Porque nunca falta un perro que viene y te muerde el brazo
+Y hablar de más
+En mi vocabulario eso no está, payaso, yo no me disfrazo
+Y desde pequeño me enseñaron a hacer leña y por siempre lo voy a hacer
+Yo soy el mismo de ayer
+Yo nunca me vendo, ni por plata ni por miedo
+Yo sé bien lo que hay que hacer, mucho dinero y poder
+Esa es la letra
+</pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

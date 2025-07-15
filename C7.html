@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Si Mañana – Junior H</title>
+  <style>
+    body {
+      background-color: #0a0f2f;
+      color: #e0e7ff;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #60a5fa;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000a1a;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #60a5fa;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #a5b4fc;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #60a5fa;
+      color: #0a0f2f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background-color: #121d5a;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #60a5fa;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #e0e7ff;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .acordes-img {
+      max-width: 140px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #60a5fa;
+    }
+    .acorde-label {
+      text-align: center;
+      margin-top: 8px;
+      color: #a5b4fc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Si Mañana – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#60a5fa;">Acordes</h2>
+    <pre>
+Fm7    3 tiempo
+A#m    1 tiempo
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <img src="img/fm7.jpg" alt="Acorde Fm7" class="acordes-img" />
+        <p class="acorde-label">Fm7</p>
+      </div>
+      <div>
+        <img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img" />
+        <p class="acorde-label">A#m</p>
+      </div>
+    </div>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Acordes confirmados por LaCuerda.net (Fm7, A#m)
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+Fm7
+Si mañana ya no hay nada
+A#m
+El día en que me vaya vas a llorar
+
+Fm7
+Quizás y estén adentro de la caja
+A#m
+Con flores, canciones y velas de cristal
+
+Fm7
+Y ya no estén de perdis pa' un saludo
+A#m
+Un abrazo de mano, de mí te acordarás
+
+Fm7
+Querrás volverme, mirar hasta en lo oscuro
+A#m
+Sin llantos, reclamos ni nada por hacer
+
+Fm7
+Me iré, lejos y no sé cuándo vuelva
+
+Fm7
+Si mañana ya no hay nada
+A#m
+El día en que me vaya, vas a llorar
+
+Fm7
+Querrás volverme, besar y a mirarme
+A#m
+Los ojos, nosotros, el amor que había
+
+Fm7
+O hay, no sé, al menos fue un gusto
+A#m
+Porque yo sé que igual un día me iré
+
+Fm7
+Tal vez, no fue nada y esto es un culto
+A#m
+Me voy pa' nunca regresar
+
+Fm7
+Quizás mañana encuentras lo absoluto
+</pre>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Letra y acordes verificados en LaCuerda.net
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

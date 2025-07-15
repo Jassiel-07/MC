@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ojos Colorados – Junior H x Alto Linaje</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #555;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      line-height: 1.5em;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+    }
+    .imagenes-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .acorde {
+      text-align: center;
+    }
+    .acorde img {
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ojos Colorados – Junior H x Alto Linaje</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+F#m    1 tiempo
+C#m    1 tiempo
+G#m    2 tiempos
+A#m    2 tiempos
+    </pre>
+    <div class="imagenes-container">
+      <div class="acorde">
+        <p>F#m</p>
+        <img src="img/fsm.jpg" alt="Acorde F#m" />
+      </div>
+      <div class="acorde">
+        <p>C#m</p>
+        <img src="img/csm.jpg" alt="Acorde C#m" />
+      </div>
+      <div class="acorde">
+        <p>G#m</p>
+        <img src="img/gsm.jpg" alt="Acorde G#m" />
+      </div>
+      <div class="acorde">
+        <p>A#m</p>
+        <img src="img/asm.jpg" alt="Acorde A#m" />
+      </div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+[Intro]
+F#m  C#m
+F#m  C#m
+
+F#m
+Un gallito Master Kush pa' andar bien
+C#m
+Ojos colorados se me han de ver
+F#m
+Purple drank, doble vaso pa' andar al cien
+C#m
+Bien placoso y malandro, no hay que temer
+
+F#m
+Desde morrillo en las calles me aprendí a mover
+C#m
+Poco a poco subiendo de nivel
+F#m
+De la buena escuela cosas me grabé
+C#m
+Con los altos mandos siempre estoy al cien
+
+F#m
+¿Que voy muy bien en qué les afecta?
+C#m
+Cada raya representa
+F#m
+Tinta corre por mis venas
+C#m
+Hoy que soy alguien todos me respetan
+
+F#m
+Las reglas que se manejan
+C#m
+Por lo derecho no hay puertas
+F#m
+Un gallito Master Kush pa' andar bien
+C#m
+Ojos colorados se me han de ver
+
+F#m
+Purple drank, doble vaso pa' andar al cien
+C#m
+Bien placoso y malandro, no hay que temer
+F#m
+Desde morrillo en las calles me aprendí a mover
+C#m
+Poco a poco subiendo de nivel
+
+F#m
+De la buena escuela cosas me grabé
+C#m
+Con los altos mandos siempre estoy al cien
+F#m
+¿Que voy muy bien en qué les afecta?
+C#m
+Cada raya representa
+
+F#m
+Tinta corre por mis venas
+C#m
+Hoy que soy alguien todos me respetan
+F#m
+Las reglas que se manejan
+C#m
+Por lo derecho no hay puertas
+</pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

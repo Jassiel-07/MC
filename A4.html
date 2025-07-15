@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Por Dentro – Junior H ft. Ed Maverick</title>
+  <style>
+    body {
+      background-color: #1a0025;
+      color: #ffd6fa;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff66cc;
+      text-shadow: 2px 2px 5px #2e003e;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff66cc;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff66cc;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff66cc;
+      color: #2e003e;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #2e003e;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      color: #ffd6fa;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff66cc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Por Dentro – Junior H ft. Ed Maverick</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff66cc;">Acordes</h2>
+    <p>Progresión principal (intro, versos, coro):</p>
+    <pre>
+G   Em
+G   Em
+G   Em
+G   Em
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">G</p>
+        <img src="img/g.jpg" alt="Acorde G" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">Em</p>
+        <img src="img/em7.jpg" alt="Acorde Em7" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Acordes extraídos de fuentes confiables y adaptados para guitarra.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff66cc;">Letra con acordes</h2>
+    <pre>
+[Intro]
+G   Em   G   Em
+
+G
+Sí, yo me voy
+Em
+Te voy a dejar atrás con la traición
+G
+Yo con el dinero y ya me pondré para lo mío
+Em
+Nuevas niñas, aunque ya nada es de verdad
+Les doy y me dan
+
+G
+Elegantes
+Em
+Esa flor no quiere enamorarse
+No quiere enamorarse
+G
+Elegantes
+Em
+Marchitó las rosas que le daba
+G
+Y se murió por dentro, oh-oh-oh
+Em
+Se murió por dentro oh-oh-oh
+G
+Se murió por dentro oh-oh-oh
+Em
+Se murió por dentro oh-oh-oh
+G
+Se murió por dentro oh-oh-oh
+Em
+Se murió por dentro oh-oh-oh
+Se murió por dentro
+
+G
+Varias son como tú
+Em
+Dan la espalda y luego quieren regresar
+Me dijo a quién usar
+G
+Ya no endulza ni el jarabe
+Em
+Pa dormir el sentimiento que a mí me da
+Ya nada es de verdad
+G
+Elegantes
+Em
+Marchitó las rosas que le daba
+G
+Y se murió por dentro, oh-oh-oh
+Em
+Se murió por dentro oh-oh-oh
+G
+Se murió por dentro oh-oh-oh
+Em
+Se murió por dentro oh-oh-oh
+G
+Se murió por dentro oh-oh-oh
+Em
+Se murió por dentro oh-oh-oh
+Se murió por dentro
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

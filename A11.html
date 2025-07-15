@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hene$$y – Junior H</title>
+  <style>
+    body {
+      background-color: #2f004f;
+      color: #f8e6f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #f06292;
+      text-shadow: 2px 2px 5px #4b2e6f;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #f06292;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #f06292;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #f06292;
+      color: #2f004f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #4b2e6f;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #f06292;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+    .chord {
+      color: #f8c1da;
+      font-weight: bold;
+      font-family: monospace;
+      margin-right: 6px;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #f06292;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hene$$y</h1>
+  <h2 style="text-align:center; color:#f8e6f2; margin-top: -10px; margin-bottom: 30px;">Junior H</h2>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content" style="display:block;">
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">A</p>
+        <img src="img/a.jpg" alt="Acorde A" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">Em7</p>
+        <img src="img/em7.jpg" alt="Acorde Em7" class="acordes-img">
+      </div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <span class="chord">A</span>Te ves así, como la primera vez<br>
+    <span class="chord">Em7</span>Sí<br>
+    <span class="chord">A</span>Bella, haces que tenga más ganas de ti<br>
+    <span class="chord">Em7</span>Sí<br><br>
+
+    <strong>Coro:</strong><br>
+    <span class="chord">A</span>¿Qué irá a pasar si en una copa de cristal<br>
+    <span class="chord">Em7</span>Sirvo tu belleza y la bebemos los dos igual?<br>
+    <span class="chord">A</span>El Henny que recorra nuestra piel<br>
+    <span class="chord">Em7</span>Y nosotros encantados de pasar la noche<br><br>
+
+    <strong>Verso:</strong><br>
+    <span class="chord">A</span>Sírvanse otro, sírvanse otro<br>
+    <span class="chord">Em7</span>Te ves así como la primera vez<br>
+    <span class="chord">A</span>Sí<br>
+    <span class="chord">Em7</span>Bella, haces que quiera tenerte aquí<br>
+    <span class="chord">A</span>En mí<br><br>
+
+    <strong>Coro:</strong><br>
+    <span class="chord">A</span>¿Qué irá a pasar si en una copa de cristal<br>
+    <span class="chord">Em7</span>Sirvo tu belleza y la bebemos los dos igual?<br>
+    <span class="chord">A</span>El Henny que recorra nuestra piel<br>
+    <span class="chord">Em7</span>Y nosotros encantados de pasar la noche
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

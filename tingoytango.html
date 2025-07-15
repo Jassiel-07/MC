@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Tingo y Tango – Junior H</title>
+  <style>
+    body {
+      background: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #555;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tingo y Tango – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+Em   1 tiempo
+C    1 tiempo
+G    1 tiempo
+D    1 tiempo
+B7   1 tiempo
+    </pre>
+    <p style="font-style:italic; color:#888;">
+      Tonalidad: Mi menor (Em), BPM: 200 1
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+[Intro]
+Em  C  G  D  B7  (x3)
+
+[Em] Yo no me voy a quemar, aunque [C]lumbre aquí hay de [G]más
+[D] Está dura la tatema, [B7]pero traigo buena escuela
+[Em] La bandera tricolor, [C]en medio un pinche [G]aguilón
+[D] En Califas yo fui criado, [B7]pero sangre michoacano
+
+[Em] Del ‘209’, rumbo pa’ L.A., [C]pa’ enfiestar tranquilo
+[G] Pa’ chambear también, [D]del tingo pal’ tango, [B7]de aquí pa’llá
+[Em] Buena sangre traigo, [C]soy de Michoacán
+[G] Suenan las guitarras, [D]listos pa’ enfiestar, [B7]…
+[Em] Y si El Gordo anda alegre, [C]se pone a tomar
+[G] Popeye no falla, [D]siempre anda al millón
+[B7] El John por un lado, ya se les amaneció (x2)
+
+[Em] A chambear pa’ merecer, [C]me gusta gastar de a cien
+[G] Pero el respeto se gana y [D]eso sí nunca me falla, [B7]…
+[Em] Bailes, morras de a montón, [C]para mí son lo mejor
+[G] Aunque algunas no valoran, [D]del dinero se enamoran, [B7]…
+[Em] De whisky un buen trago y [C]pa’ levantar
+[G] Rolo con amigos, polvo angelical, [D]
+[B7] Por los bulevares o por el freeway
+
+[Em] Suenan las guitarras, [C]listos pa’ enfiestar
+[G] Si El Gordo anda alegre, [D]se pone a tomar, [B7]…
+[Em] Compa May no falla, [C]siempre anda al millón
+[G] Gonzalo aquí a un lado, [D]ya se les amaneció (x2)
+</pre>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

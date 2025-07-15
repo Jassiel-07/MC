@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mente Positiva – Junior H</title>
+  <style>
+    body {
+      background-color: #0a0f2f;
+      color: #e0e7ff;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #60a5fa;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000a1a;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #60a5fa;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #a5b4fc;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #60a5fa;
+      color: #0a0f2f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background-color: #121d5a;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #60a5fa;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #e0e7ff;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .acordes-img {
+      max-width: 140px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #60a5fa;
+    }
+    .acorde-label {
+      text-align: center;
+      margin-top: 8px;
+      color: #a5b4fc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mente Positiva – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#60a5fa;">Acordes</h2>
+    <pre>
+C#     1 tiempo
+Fm7    1 tiempo
+D#     1 tiempo
+D      1 tiempo
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <img src="img/cs.jpg" alt="Acorde C#" class="acordes-img" />
+        <p class="acorde-label">C#</p>
+      </div>
+      <div>
+        <img src="img/fm7.jpg" alt="Acorde Fm7" class="acordes-img" />
+        <p class="acorde-label">Fm7</p>
+      </div>
+      <div>
+        <img src="img/ds.jpg" alt="Acorde D#" class="acordes-img" />
+        <p class="acorde-label">D#</p>
+      </div>
+      <div>
+        <img src="img/d.jpg" alt="Acorde D" class="acordes-img" />
+        <p class="acorde-label">D</p>
+      </div>
+    </div>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Acordes confirmados por LaCuerda.net: tonalidad de Fa m y Chordify
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+C#
+Mente positiva y aquí hay cosas de la vida
+Fm7
+Si hablo de animales me gusta más gorilita
+C#
+Tengo quien me cuide, también quien quiere matarme
+D#                    D
+Pero no me escondo, ya saben dónde encontrarme
+
+C#
+Las morras me gustan, son lo mejor de la vida
+Fm7
+Me gustan las güeritas también las morenitas
+D#                      D
+Pero que estén locas pa' tirar bien el desmadre
+C#                    Fm7
+Y si saco un cuerno ellas también quieran jalarle
+
+C#              Fm7
+Que si la muerte, que si el dinero
+D#             D
+Que hay que corretiar billete
+C#               Fm7
+Ya no hay pendiente, que buenas noches
+D#             D
+Unas botellas y que tiren buena trampa
+
+C#        Fm7
+Aquí andamos bien a gusto, no voy a parar
+C#        Fm7
+Polvo, mujeres y amigos, me gusta rolar
+
+C#
+Quemando llantita, que me quema la sierrita
+Fm7
+Ya prendió las luces, atrás viene un policía
+D#              D
+No soy hocicón ni me gusta tirar charola
+C#                Fm7
+Mejor no me paro y si me alcanza pago cuota
+
+C#               Fm7
+El que es aventado y tiene huevos en la vida
+D#               D
+Siempre trae dinero y pide ayudar a su familia
+C#              Fm7
+Siempre trae buen carro pa' levantar buenas morras
+D#             D
+Y al que se atraviesa le hacemos volar la gorra
+</pre>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Letra y acordes completados según LaCuerda.net y PDF de acordes/requinto
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

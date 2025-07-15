@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>A Los 19 – Junior H</title>
+  <style>
+    body {
+      background-color: #0a1a2a;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffa500;
+      text-shadow: 2px 2px 5px #002244;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffa500;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ffa500;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ffa500;
+      color: #002244;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #002244;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      color: #e6e6e6;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A Los 19 – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <p>Progresión oficial de la canción (2 tiempos cada uno):</p>
+    <pre>
+Fm7   A#m   D#   G#
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">Fm7</p><img src="img/fm7.jpg" alt="Acorde Fm7" class="acordes-img"></div>
+      <div><p style="text-align:center;">A#m</p><img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img"></div>
+      <div><p style="text-align:center;">D#</p><img src="img/ds.jpg" alt="Acorde D#" class="acordes-img"></div>
+      <div><p style="text-align:center;">G#</p><img src="img/gs.png" alt="Acorde G#" class="acordes-img"></div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Progresión confirmada: Fm7 – A#m – D# – G# (2 tiempos cada uno)
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ffa500;">Letra completa</h2>
+    <pre>
+A los 19, mi vida relaté  
+De abajo pa' riba, como una ruleta andé  
+A la edad de 6, en una patrulla andé  
+Por unos errores, por mi hermana la rifé  
+
+No me ha pasado nada  
+Que compare a mis papás  
+A ellos les agradezco y por ellos la voy a rifar  
+
+En el norte de Oregon, Fifty-three me vio crecer  
+Dios no me ha abandonado y hasta el día de hoy me ha ido bien  
+La mente del negocio tenía para heredar  
+Pa' generar billetes, vieran, eso se dio bien  
+
+Paseando a mi cachorro, él es mi amigo fiel  
+Siempre anda por mi lado y me espera hasta donde esté  
+En un Camaro gris por Portland me han visto andar  
+Ya se llegó el viernecito y las morras no han de faltar  
+
+Radicamos en South Central, las bocinas van zumbando  
+Más tarde la nochecita, que truene la banda en lo alto  
+Un saludo a mi abuelo hasta el cielo que me ve  
+No ando chueco ni derecho, la duda les dejaré
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

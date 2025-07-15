@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Me Consume – Junior H</title>
+  <style>
+    body {
+      background-color: #2a003f;
+      color: #fdddf9;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff70d9;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff70d9;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff70d9;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff70d9;
+      color: #2a003f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #4b006e;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ff70d9;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em; line-height: 1.5em;
+      color: #fdddf9;
+    }
+    .imagenes-container {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 20px; margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff70d9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Me Consume – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff70d9;">Acordes principales</h2>
+    <p>Uso de acordes en tono de Bb (como en versiones populares):</p>
+    <pre>
+A#   C7   Dm7
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">Bb</p><img src="img/as.jpg" alt="Acorde Bb" class="acordes-img"></div>
+      <div><p style="text-align:center;">C7</p><img src="img/c7.jpg" alt="Acorde C7" class="acordes-img"></div>
+      <div><p style="text-align:center;">Dm7</p><img src="img/dm7.jpg" alt="Acorde Dm7" class="acordes-img"></div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Acordes obtenidos de AcordesWeb y LaCuerda: secuencia Bb–C7–Dm7 en intro y versos 1.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff70d9;">Letra con acordes</h2>
+    <pre>
+[Intro]
+Bb   C7   Dm7   C7   Bb   C7   Dm7
+
+Bb            C7          Dm7
+Pasan las horas de dos en dos
+     C7                Bb
+Y a mí me consume aún el recuerdo
+     C7           Dm7
+De lo que pasó entre tú y yo
+Bb          C7          Dm7
+Tú, de quien me acuerdo a cada rato
+    C7               Bb
+Pero todos los días, para ser exacto
+    C7               Dm7
+Te clavaste bien en mí
+
+Bb            C7               Dm7
+Si quieres nos vamos, nos perdemos en calor
+     C7                 Bb
+Igual y ya tenemos el tiempo
+     C7                     Dm7
+Pa' recordar bien a los viejos tiempos
+Bb            C7               Dm7
+Si quieres, y cada que te llegue a ti el dolor
+     C7            Bb
+Acuérdate de que yo fui tu yo
+    C7               Dm7
+Para que te duela más el pecho
+
+Bb                          Dm7    C7    Bb
+Hoy sé ya bien de amores que ninguno habrá, ya no habrá
+Bb            C7     Dm7
+Me consume Cupido dijo ya, ya no habrá
+
+[Repite misma progresión para el resto]
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

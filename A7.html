@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fvck - Junior H</title>
+  <style>
+    body {
+      background-color: #1a001f;
+      color: #ffe6f7;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #330033;
+      padding: 20px;
+      text-align: center;
+      color: #ff99cc;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .tabs {
+      display: flex;
+      background-color: #660066;
+      justify-content: center;
+    }
+
+    .tab-button {
+      flex: 1;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #660066;
+      color: white;
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button:hover {
+      background-color: #990099;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .active-button {
+      background-color: #990099 !important;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-size: 1em;
+      color: #ffd9ec;
+    }
+
+    .chord-diagram {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .chord-diagram img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ff99cc;
+    }
+
+    .chord-diagram span {
+      display: block;
+      margin-top: 5px;
+      font-weight: bold;
+      color: #ffccff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Fvck - Junior H</h1>
+</header>
+
+<div class="tabs">
+  <button class="tab-button active-button" onclick="openTab('acordes', this)">Acordes</button>
+  <button class="tab-button" onclick="openTab('letra', this)">Letra</button>
+</div>
+
+<div id="acordes" class="tab-content active">
+  <h2>Acordes Usados</h2>
+  <div class="chord-diagram">
+    <img src="img/csm7.jpg" alt="C#m77">
+    <span>F#m7</span>
+  </div>
+  <div class="chord-diagram">
+    <img src="img/gm.jpg" alt="Gm">
+    <span>Cm</span>
+  </div
+
+<div id="letra" class="tab-content">
+  <pre>
+[Intro]
+F#m7   Cm   F#m7   Cm  
+B   Cm   B   F#m7
+
+[Verso 1]
+C#m7
+Veo tus fotos (fuck)  
+C#m7
+Cómo has cambiado  
+Gm
+No sé si estás aún más bella, y quizá  
+C#m
+Te ves muy bien  
+
+C#m           Gm
+Pero parece, que ocupas amor  
+Gm
+Que ocupas amor, mi amor  
+C#m7
+Como el que doy o te daba, perdón  
+Gm
+Se me olvidó  
+
+Gm
+Que ya hace tiempo yo  
+C#m
+Se na' de ti, ni tú de mí, mi amor  
+Gm
+Porque los dos, no queremos sino  
+C#m
+Cuánto tiempo bastará para volver  
+
+C#m7
+A perderme en tus ojos y querernos  
+Gm
+Yo no sé, yo no sé  
+C#m7
+Cuánto tiempo esperaré seguir viviendo  
+Gm
+Cargando mi corazón parchado  
+
+[Puente]
+No lo sé, fuck, ¿qué hay que hacer?  
+Dime por qué, dime por qué (fuck)  
+(Fuck, te extraño mami) 
+No eres dueña, de este premio en mi altar  
+Ahoea ando sad, y tú solo, sola
+
+Cuánto tiempo bastará para volver  
+A perderme en tus ojos y querernos  
+Yo no sé, yo no sé  
+Cuánto tiempo esperaré seguir viviendo  
+
+Cargando mi corazón parchado  
+No lo sé, fuck, ¿qué hay que hacer?  
+Dime por qué, dime por qué, dime por qué  
+Nomás me traes como un loco  
+  </pre>
+</div>
+
+<script>
+  function openTab(tabId, element) {
+    var contents = document.getElementsByClassName('tab-content');
+    var buttons = document.getElementsByClassName('tab-button');
+    for (let i = 0; i < contents.length; i++) {
+      contents[i].classList.remove('active');
+      buttons[i].classList.remove('active-button');
+    }
+    document.getElementById(tabId).classList.add('active');
+    element.classList.add('active-button');
+  }
+</script>
+
+</body>
+</html>

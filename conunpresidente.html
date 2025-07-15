@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Con un Presidente – Junior H ft. Esteban Gabriel</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffcc00;
+      text-shadow: 2px 2px 5px #000000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffcc00;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ffcc00;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ffcc00;
+      color: #1a1a1a;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #2a2a2a;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffcc00;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      color: #e0e0e0;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Con un Presidente – Junior H ft. Esteban Gabriel</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffcc00;">Acordes</h2>
+    <p>Progresión principal (intro, versos, coro):</p>
+    <pre>
+F#m   Bm
+F#m   Bm
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">F#m</p>
+        <img src="img/fm.jpg" alt="Acorde F#m" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">Bm</p>
+        <img src="img/bm.jpg" alt="Acorde Bm" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Acordes verificados según AcordesWeb y Chordify.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ffcc00;">Letra con acordes</h2>
+    <pre>
+[Intro]
+F#m   Bm   F#m   Bm
+
+F#m
+Con un presidente me forjo una línea
+Bm
+Un toque de magia y la piel se me eriza
+F#m
+La llave de mi chingona más que lista
+Bm
+Saco la bolsita, pura cocaína
+
+F#m
+Mi vicio es mi vicio, nadie patrocina
+Bm
+Traigo los billetes envueltos en ligas
+F#m
+Enamorado de algunas mujeres
+Bm
+A primera vista hay unas cuantas dieces
+
+F#m
+He hecho algunas cosas que no me orgullecen
+Bm
+Hay algún romance en bailar con la muerte
+F#m
+No es que intente ser el fuerte entre los fuertes
+Bm
+Pero se incomodan cuando estoy presente
+
+[Verso]
+F#m
+De una oveja negra a un lobo negro
+Bm
+No ocupo pa' nada si no cargo miedo
+F#m
+Con la frente en alto y siempre voy de frente
+Bm
+Que se escuchen recio corridos de polvo
+
+F#m
+No porque soy joven crean que soy pendejo
+Bm
+Me tiro a una esquina y un suspiro lento
+F#m
+Prendo un Camel crush pa' acompañar la noche
+Bm
+Y un trago elegante complementa el porte
+
+[Outro]
+F#m
+Con un presidente me forjo una línea
+Bm
+Un toque de magia y la piel se me eriza
+F#m
+Mi vicio es mi vicio, nadie patrocina
+Bm
+Traigo los billetes envueltos en ligas
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

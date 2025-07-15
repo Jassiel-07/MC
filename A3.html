@@ -1,0 +1,190 @@
+<!-- A3.html – Enséñame -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Enséñame – Junior H</title>
+  <style>
+    body {
+      background-color: #1a0025;
+      color: #ffd6fa;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff66cc;
+      text-shadow: 2px 2px 5px #2e003e;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff66cc;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff66cc;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff66cc;
+      color: #2e003e;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #2e003e;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      color: #ffd6fa;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff66cc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Enséñame – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff66cc;">Acordes</h2>
+    <p>Progresión real:</p>
+    <pre>
+F# (1 tiempo)
+G# (1 tiempo)
+A#m (2 tiempos)
+F# (1 tiempo)
+D#m7 (1 tiempo)
+A#m (2 tiempos)
+D#m7 (2 tiempos)
+A#m (2 tiempos)
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">F#</p>
+        <img src="img/fs.jpg" alt="Acorde F#" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">G#</p>
+        <img src="img/gs.jpg" alt="Acorde G#" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">A#m</p>
+        <img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">D#m7</p>
+        <img src="img/dsm7.jpg" alt="Acorde D#m7" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Acordes colocados sobre la letra según progresión real. Puedes usar cejilla en traste 1 si deseas tocarlo más agudo.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff66cc;">Letra con acordes</h2>
+    <pre>
+F#        G#       A#m           F#
+Enséñame una vez más a recorrer tu piel
+D#m7     A#m     D#m7         A#m
+Y en como volver a amarte
+
+F#        G#       A#m           F#
+Con este corazón, tú misma lo sacaste
+D#m7     A#m     D#m7         A#m
+Y te lo has quedado
+
+F#        G#       A#m           F#
+Llega febrero y te trae con él para verme
+D#m7     A#m     D#m7         A#m
+Y el problema que es muy tarde para pedir perdón
+
+F#        G#       A#m           F#
+Recuerda que fallaste y me has dado el dolor
+D#m7     A#m     D#m7         A#m
+Bien dañado, pero no se me olvida tu baby doll
+
+F#        G#       A#m           F#
+Cuando te lo ponías y te hacía mía
+D#m7     A#m     D#m7         A#m
+Cuando te lo ponías, el tiempo se nos iba
+
+F#        G#       A#m           F#
+Enséñame mija, pero sin mentiras
+D#m7     A#m     D#m7         A#m
+Te va chiquitita, puro Junior H a la verga
+
+F#        G#       A#m           F#
+Enséñame una vez más a recorrer tu piel
+D#m7     A#m     D#m7         A#m
+Y una noche más tocarte, cero sentimientos
+
+F#        G#       A#m           F#
+Recuerda que fallaste, pero ya te extraño
+D#m7     A#m     D#m7         A#m
+Llega febrero y te trae con él para verme
+
+F#        G#       A#m           F#
+El problema que es muy tarde, para mí el tiempo
+D#m7     A#m     D#m7         A#m
+Recuerda que atrasaste y perdiste el amor
+
+F#        G#       A#m           F#
+Bien dañado, pero no se me olvida tu baby doll
+D#m7     A#m     D#m7         A#m
+Cuando te lo ponías y te hacía mía
+
+F#        G#       A#m           F#
+Cuando te lo ponías, el tiempo se nos iba
+D#m7     A#m     D#m7         A#m
+Enséñame mija, pero sin mentiras
+
+F#        G#       A#m           F#
+Enséñame mija, pero sin mentiras
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

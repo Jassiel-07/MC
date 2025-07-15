@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Corazón Negro - Junior H</title>
+  <style>
+    body {
+      background-color: #1a001f;
+      color: #ffe6f7;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #330033;
+      padding: 20px;
+      text-align: center;
+      color: #ff99cc;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .tabs {
+      display: flex;
+      background-color: #660066;
+      justify-content: center;
+    }
+    .tab-button {
+      flex: 1;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #660066;
+      color: white;
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .tab-button:hover {
+      background-color: #990099;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      color: #ffd9ec;
+    }
+    .active {
+      display: block;
+    }
+    .active-button {
+      background-color: #990099 !important;
+    }
+    .chord-diagram {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    .chord-diagram img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ff99cc;
+    }
+    .chord-diagram span {
+      display: block;
+      margin-top: 5px;
+      font-weight: bold;
+      color: #ffccff;
+    }
+    .rasgueo {
+      margin-top: 15px;
+      font-style: italic;
+      color: #ffb3d9;
+      font-size: 1.3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Corazón Negro - Junior H</h1>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-button active-button" onclick="openTab('acordes', this)">Acordes</button>
+    <button class="tab-button" onclick="openTab('letra', this)">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content active">
+    <h2>Acordes Usados</h2>
+    <div class="chord-diagram">
+      <img src="img/a.jpg" alt="A" />
+      <span>A (1 tiempo)</span>
+    </div>
+    <div class="chord-diagram">
+      <img src="img/bm.jpg" alt="Bm" />
+      <span>Bm (1 tiempo)</span>
+    </div>
+    <div class="chord-diagram">
+      <img src="img/em7.jpg" alt="Em7" />
+      <span>Em7 (2 tiempos)</span>
+    </div>
+    <p class="rasgueo">
+      Rasgueo:<br />
+      ↓ ↑ ↑ ↓ ↑ ↑ ↓
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content">
+    <pre>
+Me lastiman tus mentiras
+En unas equis, cocaina
+Se me olvida que me duele, que me matas
+Desangrado con mil heridas
+Cupido flechas perdidas
+Tardes oscuras
+Polvo de angel me tortura
+Ahora mi corazón es negro
+Y verte no hace bien
+Ahora lo engañas a él
+Quieres la fama y dinero
+Pero yo ya no te quiero
+Ahora mi corazón es negro
+Por eso no me importa si me voy a destrozar
+Prefiero lo malo adentro
+Si te llamo droga lo siento
+Es parecido a Dios
+Para siempre, eh
+Me lastiman tus mentiras
+Sentimientos que tú fingías
+Se me olvida
+Que eres falsa, que eres fría
+Derrotado con poca vida
+De rodillas te ven la cima
+Tardes oscuras
+Polvo de angel me tortura
+Ahora mi corazón es negro
+Y verte no hace bien
+Ahora lo engañas a él
+Quieres la fama y dinero
+Pero yo ya no te quiero
+Ahora mi corazón es negro
+Por eso no me importa si me voy a destrozar
+Prefiero lo malo adentro
+Si te llamo droga, lo siento
+Es parecido a Dios
+Para siempre, eh
+    </pre>
+  </div>
+
+  <script>
+    function openTab(tabId, element) {
+      const tabs = document.getElementsByClassName('tab-content');
+      const buttons = document.getElementsByClassName('tab-button');
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+        buttons[i].classList.remove('active-button');
+      }
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active-button');
+    }
+  </script>
+</body>
+</html>

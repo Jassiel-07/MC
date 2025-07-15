@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lamento Boliviano – Junior H</title>
+  <style>
+    body {
+      background-color: #2f004f;
+      color: #f8e6f2;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #f06292;
+      text-shadow: 2px 2px 5px #4b2e6f;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #f06292;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #f06292;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #f06292;
+      color: #2f004f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #4b2e6f;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #f06292;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    .chord {
+      color: #f8c1da;
+      font-weight: bold;
+      font-family: monospace;
+      margin-right: 6px;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #f06292;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lamento Boliviano</h1>
+  <h2 style="text-align:center; color:#f8e6f2; margin-top: -10px; margin-bottom: 30px;">Junior H</h2>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content" style="display:block;">
+    <p style="text-align:center;">Progresión (D#m7 4t, A#m 3t, Am 1t, G#m 4t, A#m 4t)</p>
+    <pre style="text-align:center; font-size:1.2em;">
+D#m7  –  A#m  –  Am  –  G#m  –  A#m
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">D#m7</p>
+        <img src="img/dm7.jpg" alt="Acorde D#m7" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">A#m</p>
+        <img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">Am</p>
+        <img src="img/am.jpg" alt="Acorde Am" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">G#m</p>
+        <img src="img/gm.jpg" alt="Acorde G#m" class="acordes-img">
+      </div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <span class="chord">D#m7</span>Me quieren agitar, me incitan a gritar<br>
+    <span class="chord">A#m</span>Soy como una roca, palabras no me tocan<br>
+    <span class="chord">Am</span>Adentro hay un volcán, que pronto va a estallar<br>
+    <span class="chord">G#m</span>Yo quiero estar tranquilo<br><br>
+
+    <span class="chord">D#m7</span>Es mi situación, una desolación<br>
+    <span class="chord">A#m</span>Soy como un lamento, lamento boliviano<br>
+    <span class="chord">Am</span>Que un día empezó y no va a terminar<br>
+    <span class="chord">G#m</span>Ya nadie me hace daño<br><br>
+
+    <span class="chord">D#m7</span>Uh ooh, yo yo, yo oh<br>
+    <span class="chord">A#m</span>Yeh<br>
+    <span class="chord">Am</span>Yeh<br>
+    <span class="chord">G#m</span>Y yo estoy aquí<br><br>
+
+    <span class="chord">D#m7</span>Borracho y loco<br>
+    <span class="chord">A#m</span>Y mi corazón idiota siempre brillará<br>
+    <span class="chord">Am</span>Y yo te amaré<br>
+    <span class="chord">G#m</span>Te amaré por siempre<br><br>
+
+    <span class="chord">D#m7</span>Nena, no te peines en la cama<br>
+    <span class="chord">A#m</span>Que los viajantes se van a atrasar<br><br>
+
+    <span class="chord">Am</span>Uh ooh, yo yo, yo oh<br>
+    <span class="chord">G#m</span>Yeh<br>
+    <span class="chord">D#m7</span>Yeah<br>
+    <span class="chord">A#m</span>Y yo estoy aquí<br><br>
+
+    <span class="chord">Am</span>Borracho y loco<br>
+    <span class="chord">G#m</span>Y mi corazón idiota siempre brillará<br>
+    <span class="chord">D#m7</span>Y yo te amaré<br>
+    <span class="chord">A#m</span>Te amaré por siempre<br><br>
+
+    <span class="chord">Am</span>Nena, no te peines en la cama<br>
+    <span class="chord">G#m</span>Que los viajantes se van a atrasar
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      contents.forEach(c => c.style.display = 'none');
+      document.getElementById(tab.dataset.tab).style.display = 'block';
+    }));
+  </script>
+</body>
+</html>

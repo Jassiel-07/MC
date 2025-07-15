@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Junior H - Álbumes</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #ff3366;
+    }
+
+    .albumes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 2px solid #ff3366;
+      border-radius: 15px;
+      width: 180px;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.3s ease, background-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #ff3366;
+      color: #000;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      pointer-events: none; /* ← evita que la imagen bloquee el clic */
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Junior H - Álbumes</h1>
+
+  <div class="albumes">
+    <a href="cigarro.html" class="card">
+      <img src="img/mi_vida_en_un_cigarro.jpg" alt="Mi Vida en un Cigarro">
+      <p>Mi Vida en un Cigarro</p>
+    </a>
+
+    <a href="album2.html" class="card">
+      <img src="img/atrapado_en_un_sueno.jpg" alt="Atrapado en un Sueño">
+      <p>Atrapado en un Sueño</p>
+    </a>
+
+    <a href="juniorh.html" class="card">
+      <img src="img/cruising_with_junior_h.jpg" alt="Cruising With Junior H">
+      <p>Cruising With Junior H</p>
+    </a>
+
+    <a href="boyz.html" class="card">
+      <img src="img/sad_boyz_4_life.jpg" alt="$ad Boyz 4 Life">
+      <p>$ad Boyz 4 Life</p>
+    </a>
+
+    <a href="boyzll.html" class="card">
+      <img src="img/sad_boyz_4_life_2.jpg" alt="$ad Boyz 4 Life II">
+      <p>$ad Boyz 4 Life II</p>
+    </a>
+
+    <a href="conti.html" class="card">
+      <img src="img/contingente.jpg" alt="Contingente">
+      <p>Contingente</p>
+    </a>
+
+    <a href="musica.html" class="card">
+      <img src="img/musica.jpg" alt="Música">
+      <p>Música</p>
+    </a>
+
+    <a href="cigarroll.html" class="card">
+      <img src="img/mi_vida_en_un_cigarro_2.jpg" alt="Mi Vida en un Cigarro 2">
+      <p>Mi Vida en un Cigarro 2</p>
+    </a>
+  </div>
+
+</body>
+</html>

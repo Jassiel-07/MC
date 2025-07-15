@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mientras Duermes - Junior H</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff69b4;
+      text-shadow: 2px 2px 5px #ff69b4;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff69b4;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff69b4;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff69b4;
+      color: #000;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #1f1f1f;
+      margin: 0 auto 50px auto;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+    }
+    .acordes-img {
+      max-width: 180px;
+      margin: 15px 10px 30px 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mientras Duermes - Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+    <button class="tab" data-tab="taba">Taba</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2>Acordes</h2>
+    <p>Los acordes principales de la canción son:</p>
+    <pre>
+Verso:
+G#m  (4 tiempos)
+D#m7 (4 tiempos)
+
+Coro:
+D#m7
+B
+    </pre>
+    <p>La progresión del verso se repite alternando cada acorde 4 tiempos. En el coro se usan solamente D#m7 y B.</p>
+    <div class="imagenes-container">
+      <div><p>G#m</p><img src="img/gsm.jpg" alt="Acorde G#m" class="acordes-img" /></div>
+      <div><p>D#m7</p><img src="img/dsm7.jpg" alt="Acorde D#m7" class="acordes-img" /></div>
+      <div><p>B</p><img src="img/b.jpg" alt="Acorde B" class="acordes-img" /></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2>Letra con acordes</h2>
+    <pre>
+[Intro x2]
+G#m  Ebm
+
+[Verso 1]
+                     G#m
+Bebé, mientras tú duermes         D#m7
+Quisiera yo imaginar que ya estás despintada  
+Y que estás recostada en tu cama  
+                  G#m
+Yo estoy entre la gente  
+Bebiendo Blue y cantando  
+            D#
+Viviendo la vida de rockstar,  
+Todo lo que le conté a mamá  
+
+[Pre‑coro]
+B
+Bebé, te pienso siempre  
+No salgo de la depre  
+Me tiene la inquietud  
+D#m7
+De que otro hombre se te acerque  
+
+B
+Bebé, te extraño siempre  
+No sales de mi mente  
+              D#m7
+Y la neta ya perdí la cuenta de cuánto meses  
+                     G#m
+Mientras tú has de dormir, soñando en otro  
+Y lo de nosotros se murió pronto  
+D#m7
+Me siento roto, me siento solo  
+Y no me puedo arrepentir  
+                                G#m
+Aunque fue poco, te lo di todo, y tú no a mí  
+
+[requinto acordes x2]
+G#m D#m7 …
+
+[Verso 2]
+D#m7
+Hoy todo es diferente  
+G#m
+Tú ya cambiaste, yo cambié  
+               D#m7
+Y tú cometiste todas esas faltas que tú me negabas  
+                         G#m
+Yo estoy entre la gente  
+Siguiendo el sueño y yo solo que te pedía  
+                                          D#m
+Que de cualquier manera tú no te alejaras  
+
+[Pre‑coro y coro se repiten igual]
+
+[Final]
+G#m D#m7 x2 …
+    </pre>
+    <p style="font-size:0.9em; color:#bbb;">Letra con acordes basada en AcordesWeb y CifraClub.</p>
+  </div>
+
+  <div id="taba" class="tab-content" style="display:none;">
+    <h2>Nota</h2>
+    <p style="margin-top: 10px; font-style: italic; color: #ff69b4;">
+      Disculpa por el momento el requinto no esta disponible
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

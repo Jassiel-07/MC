@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tal vez – Junior H</title>
+  <style>
+    body {
+      background-color: #2f004f;
+      color: #f8e6f2;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #f06292;
+      text-shadow: 2px 2px 5px #4b2e6f;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #f06292;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #f06292;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #f06292;
+      color: #2f004f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #4b2e6f;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #f06292;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    .chord {
+      color: #f8c1da;
+      font-weight: bold;
+      font-family: monospace;
+      margin-right: 6px;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #f06292;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lamento Boliviano</h1>
+  <h2 style="text-align:center; color:#f8e6f2; margin-top: -10px; margin-bottom: 30px;">Junior H</h2>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content" style="display:block;">
+    <p style="text-align:center;">Progresión básica (4 tiempos cada acorde):</p>
+    <pre style="text-align:center; font-size:1.2em;">F#m – C#m7</pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">F#m</p><img src="img/fm.jpg" alt="Acorde F#m" class="acordes-img"></div>
+      <div><p style="text-align:center;">C#m7</p><img src="img/cm7.jpg" alt="Acorde C#m7" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <span class="chord">F#m</span>Sanan cicatrices con solo cuestión de tiempo<br>
+    Y ya nos dimos cuenta que no hicimos el intento de<br>
+    De arreglarle<br>
+    <span class="chord">C#m7</span>Dime tan siquiera quien te besará a ti el cuello<br>
+    Mejor que mis labios y te viva de momentos<br>
+    ¿Quién?, dime tú quién<br>
+    Tan siquiera supiste que por ti perdí el sueño<br>
+    Y la diferencia es que por mí no hubo empeño de<br>
+    De quererme<br>
+    <span class="chord">F#m</span>Tal vez me acabe las champañas que brindaba junto a ti<br>
+    Para acordarme una vez más de ti<br>
+    Tal vez me engaña y es mi mente la que hace que piense así<br>
+    O tal vez simplemente no sea así<br>
+    Sabe', no sé, tal vez<br><br>
+
+    <span class="chord">F#m</span>Pierdo más razones si pierdo más pensamientos<br>
+    Pudiste tenerme y progresar en lo que en sueños fue<br>
+    Y aún más se fue<br>
+    Dime tan siquiera quien te llevará el exceso<br>
+    Ver, verte en las nubes y sobrepasar el cielo<br>
+    ¿Quién?, dime tú quién<br>
+    Tan siquiera supiste que por ti perdí el sueño<br>
+    Y la diferencia es que por mí no hubo empeño de<br>
+    De quererme<br>
+    <span class="chord">F#m</span>Tal vez me acabe las champañas que brindaba junto a ti<br>
+    Para acordarme una vez más de ti<br>
+    Tal vez me engaña y es mi mente la que hace que piense así<br>
+    O tal vez simplemente no sea así
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      contents.forEach(c => c.style.display = 'none');
+      document.getElementById(tab.dataset.tab).style.display = 'block';
+    }));
+  </script>
+</body>
+</html>

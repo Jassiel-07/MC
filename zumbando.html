@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zumbando – Junior H</title>
+  <style>
+    body {
+      background-color: #0a1a2a;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffa500;
+      text-shadow: 2px 2px 5px #002244;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffa500;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ffa500;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover,
+    .tab.active {
+      background-color: #ffa500;
+      color: #002244;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #002244;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Zumbando – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra con acordes</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <p>Progresión principal (4 tiempos cada uno):</p>
+    <pre>
+A#   F#m7
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">A#</p><img src="img/bb.jpg" alt="Acorde A#" class="acordes-img"></div>
+      <div><p style="text-align:center;">F#m7</p><img src="img/fsm7.jpg" alt="Acorde F#m7" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ffa500;">Letra con acordes</h2>
+    <pre>
+[Intro]
+A#      F#m7
+
+[Verso 1]
+A#
+Un cigarrito
+             F#m7
+De kush, para viajar
+A#
+Zumbando
+                 F#m7
+Por aire, por tierra o mar
+A#
+Me navego
+              F#m7
+Por la sierra o la ciudad
+A#
+Con mi gente
+                    F#m7
+Siempre al 4:20 hemos de andar
+
+[Verso 2]
+A#
+Trabajando
+                F#m7
+He llegado a este lugar
+A#
+El puesto
+                   F#m7
+He de decir, no ocupé de manguera
+A#
+A veces ando trabajando
+F#m7
+A veces vida disfrutando
+A#
+Pues un día un viejo me dijo
+F#m7
+Que vida solo hay una
+
+[Puente]
+A#
+Pero una bastará
+F#m7
+Si la sabes disfrutar
+A#
+Y aquí seguimos
+             F#m7
+Enfiestado con amigos
+A#
+No temo
+               F#m7
+De perder mi vida
+A#
+La muerte
+             F#m7
+Un día nos va a encontrar
+
+[Verso 3]
+A#
+Los ojos
+                F#m7
+Rojos por el humito
+A#
+El efecto
+                   F#m7
+Nos tiene bien calmaditos
+A#
+Ya se va mi caravana
+F#m7
+Hay que regresar a la chamba
+
+[Final]
+A#
+Entre las nubes vamos volando
+F#m7
+Entre el humo reflejando
+A#
+Con mis amigos recio ando
+F#m7
+Por las calles ruleteando
+A#
+El papel vamos rolando
+F#m7
+Para seguirle zumbando
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

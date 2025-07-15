@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Me Siento – Junior H</title>
+  <style>
+    body {
+      background-color: #0a0f2f;
+      color: #e0e7ff;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #60a5fa;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000a1a;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #60a5fa;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #a5b4fc;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #60a5fa;
+      color: #0a0f2f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background-color: #121d5a;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #60a5fa;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #e0e7ff;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .acordes-img {
+      max-width: 140px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #60a5fa;
+    }
+    .acorde-label {
+      text-align: center;
+      margin-top: 8px;
+      color: #a5b4fc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Me Siento – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#60a5fa;">Acordes</h2>
+    <pre>
+Fm7    1 tiempo
+D#     1 tiempo
+A#m    2 tiempos
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <img src="img/fmm7.jpg" alt="Acorde Fm7" class="acordes-img" />
+        <p class="acorde-label">Fm7</p>
+      </div>
+      <div>
+        <img src="img/ds.jpg" alt="Acorde D#" class="acordes-img" />
+        <p class="acorde-label">D#</p>
+      </div>
+      <div>
+        <img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img" />
+        <p class="acorde-label">A#m</p>
+      </div>
+    </div>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Acordes confirmados por LaCuerda.net y CifraClub
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+Fm7              D#           A#m
+Se ven brillar los diamantones
+Fm7        D#           A#m
+En mí mente más mil visiones que se acaban de crear
+Fm7            D#           A#m
+En mis manos las posesiones
+Fm7        D#           A#m
+Charger placoso pa' pasear
+
+Fm7            D#           A#m
+Historias viejas de a montones
+Fm7            D#           A#m
+La H en su pecho no olvida
+Fm7         D#           A#m
+Rolex en mano, Rosa Aislante
+Fm7        D#           A#m
+Mirada seria y reservada
+
+Fm7            D#           A#m
+Su distancia ante los corrientes
+Fm7            D#           A#m
+Especialmente a las lacras
+Fm7                D#              A#m
+Suena un grupo y la lavada me levanta
+Fm7            D#           A#m
+Amanecernos directos a la mañana
+
+Fm7        D#           A#m
+Me siento contento y así quiero estar
+Fm7        D#           A#m
+L.A. paseando con plebones
+Fm7        D#           A#m
+Siempre accionados pa' activarse si se ocupa remangar
+Fm7        D#           A#m
+Gucci o Louis Vui, lo que se pone pa' rostro tirar
+Fm7        D#           A#m
+Siempre anda al cien con los jefones
+
+Fm7            D#           A#m
+Así le enseño la vida
+Fm7        D#           A#m
+Por lo que sé, el ama a su madre
+Fm7            D#           A#m
+La vida da por familia
+Fm7            D#           A#m
+De aquí pa'l real tira canciones
+
+Fm7                D#           A#m
+En el gato se ve vibrar y las bocinas retumbar
+Fm7                     D#           A#m
+Suena un grupo y la lavada me levanta
+Fm7        D#           A#m
+Me siento contento y así quiero estar
+</pre>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Letra y acordes extraídos de LaCuerda.net y CifraClub
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

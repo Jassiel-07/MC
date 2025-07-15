@@ -1,0 +1,157 @@
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Clikeando – Junior H</title>
+  <style>
+    body {
+      background: #121212;
+      color: #d0d0d0;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #555;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background: #ffa500;
+      color: #121212;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+    }
+    .imagenes-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .acorde {
+      text-align: center;
+    }
+    .acorde img {
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clikeando – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <pre>
+Bm     1 tiempo
+Em7    1 tiempo
+Am     2 tiempos
+D#m7   2 tiempos
+    </pre>
+    <div class="imagenes-container">
+      <div class="acorde"><p>Bm</p><img src="img/bm.jpg" alt="Acorde Bm7"></div>
+      <div class="acorde"><p>Em7</p><img src="img/em7.jpg" alt="Acorde Em7"></div>
+      <div class="acorde"><p>Am7</p><img src="img/am.jpg" alt="Acorde Am7"></div>
+      <div class="acorde"><p>D#m7</p><img src="img/dsm7.jpg" alt="Acorde D#m7"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+<pre>
+Clikeando
+Y en el pecho su cadenón
+La medusa de puro gold
+La compré de mi primer gol
+
+Chambeando
+Y al Miami muy bien le va
+Sube un ratito y le baja
+Con un traguito de champán
+
+Rolando
+De la María me pone acá
+La Barca mi tierra natal
+En el rojo me ven pasar
+
+Silvera', bien tumba'
+Y el Chucky que me acompaña y el Junior no ha de faltar
+
+Saludos pa' mi 'apá
+Y mi morenita que a un lado que siempre ha de acompañar
+Siempre ha de acompañar
+
+Una vez más
+Junior H
+Yeh-yeh
+
+Ganando
+No me conformo, quiero más
+Cambiamos la mentalidad
+No tolero la falsedad
+
+Brincamos
+Pienso dos veces para hablar
+Necesidad no hay de gritar
+Ni mucho menos manguerear
+
+Tatuado
+Las rayas son mi protección
+Pues nada más que un San Judón
+Plasmado llevo en mi hombro
+
+Silvera', bien tumba'
+Y el Chucky que me acompaña y el Junior no ha de faltar
+
+Saludos pa' mi 'apá
+Y mi morenita que a un lado siempre me ha de acompañar
+Siempre ha de acompañar
+</pre>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

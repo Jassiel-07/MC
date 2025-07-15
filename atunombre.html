@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>A Tu Nombre - Junior H</title>
+  <style>
+    body { background-color: #0d0d0d; color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0 20px; }
+    h1 { text-align: center; margin-top: 30px; color: #ff69b4; text-shadow: 2px 2px 5px #ff69b4; }
+    .tabs { display: flex; justify-content: center; margin-top: 30px; border-bottom: 2px solid #ff69b4; }
+    .tab { padding: 12px 25px; cursor: pointer; color: #ff69b4; background: none; border: none; font-size: 1.1em; font-weight: bold; transition: 0.3s; }
+    .tab:hover, .tab.active { background-color: #ff69b4; color: #000; border-radius: 5px 5px 0 0; }
+    .tab-content { background-color: #1f1f1f; margin: 0 auto 50px; max-width: 700px; padding: 20px; border-radius: 0 10px 10px 10px; box-shadow: 0 0 15px #ff69b4; white-space: pre-wrap; font-size: 1.1em; line-height: 1.4em; }
+  </style>
+</head>
+<body>
+
+  <h1>A Tu Nombre - Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2>Acordes principales</h2>
+    <pre>
+Ab   Db   Bbm   Eb7
+    </pre>
+    <p style="font-size:0.9em; color:#bbb;">
+      Progresión según LaCuerda y Ultimate Guitar 1
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2>Letra con acordes</h2>
+    <pre>
+[Verso 1]
+Ab
+Si el dinero me mira gastar
+Db
+Es que así me acostumbré a ganar
+Bbm
+Y si a diario me miran tomar
+Eb7
+Es que no te he podido olvidar
+
+Ab
+A tu nombre otra vez voy a brindar
+Db
+Las pacas las voy a duplicar
+Bbm
+Con las morras billetes gastar
+Eb7
+Con morras otra vez me voy a enfiestar
+
+Db
+Entre drogas, mujeres las armas
+Ab
+El dinero me perdí el exceso
+Db
+Es todo lo que tú me causaste
+Ab
+Por haberme quitado tus besos
+
+Bbm
+Mi amor ya dime que si me extrañas
+Eb7
+Y que no andas con ese pendejo
+Bbm
+Que echas de menos mi habitación
+Eb7
+Y todas las noches de desvelo
+
+Ab
+Llegan morritas para no estarte pensando
+Db
+Y entre más tomo más te sigo recordando
+Bbm
+Mami, en el BMW tu perfume está regado
+Eb7
+Te llamo y llamo, pero no me has contestado
+
+Bbm
+Tal vez no quieras alguien lleno de hipocresía
+Eb7
+Todo lo bueno y malo que hacía te lo decía
+Db
+Quieres un niño bueno, romántico y poesía
+Bbm
+Y yo que soy un vago que por tus besos moría
+
+Eb7
+Y tomo y tomo mientras para no recordarte
+Db
+Otro Buchanan's abro para no pensarte
+Ab
+He estado a punto de salir a buscarte
+Db
+Pero si estás feliz tengo que respetarte
+    </pre>
+    <p style="font-size:0.9em; color:#bbb;">
+      Letra y acordes adaptados de LaCuerda.net 2 y Ultimate Guitar 3 (uso personal).
+    </p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

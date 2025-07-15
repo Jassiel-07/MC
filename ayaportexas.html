@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aya por Texas – Junior H</title>
+  <style>
+    body {
+      background-color: #0a1a2a;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffa500;
+      text-shadow: 2px 2px 5px #002244;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffa500;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ffa500;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ffa500;
+      color: #002244;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #002244;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      color: #e6e6e6;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aya por Texas – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <p>Progresión usada en la canción, tonalidad Eb:</p>
+    <pre>
+Eb   Cm   Fm   Bbm
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">Eb</p>
+        <img src="img/ds.jpg" alt="Acorde Eb" class="acordes-img">
+      </div>
+      <div><p style="text-align:center;">Cm</p>
+        <img src="img/cm.jpg" alt="Acorde Cm" class="acordes-img">
+      </div>
+      <div><p style="text-align:center;">Fm</p>
+        <img src="img/fm.jpg" alt="Acorde Fm" class="acordes-img">
+      </div>
+      <div><p style="text-align:center;">Bbm</p>
+        <img src="img/bbm.jpg" alt="Acorde Bbm" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Progresión confirmada por Chordify: Eb – Cm – Fm – Bbm 8
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ffa500;">Letra</h2>
+    <pre>
+Eb
+Me gusta vivir la vida al día porque no sabes tú muy bien  
+Cm
+Si el día de mañana la flaca venga y te la quiera comer  
+Fm
+Con un trago de buchanitas vieran me enfiesto muy bien  
+Bbm
+Rodeado de mi clika bien prendida, todos andamos cien  
+
+Eb
+En un Charger por Dallas, Texas quemando llanta me ven  
+Cm
+Con buena ropa de la marca y siempre me mirarán fresh  
+Fm
+No me gusta andar levantando el polvo, soy humilde, está bien  
+Bbm
+Me dicen “Juicy” y aquí seguimos para generales al bien  
+
+Eb
+Yo no soy presumido, pero sé lo que he ganado bien  
+Cm
+Trabajando lo hecho y no me sobra, pero me va bien  
+Fm
+El rey es Leo y compa Esparza, mi mano siempre tendrán  
+Bbm
+Mis amigos son bien contados y para ellos voy a estar  
+
+Eb
+Me mirarán allá por Texas, bien pendiente al trabajar  
+Cm
+Ya me despido con un trago de buchanas pa’ enfiestar  
+Fm
+Le doy gracias a Dios por la vida que llevo yo acá  
+Bbm
+Ya me despido, soy el Juicy, aquí en Texas me encuentran  
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

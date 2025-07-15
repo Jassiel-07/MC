@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>160 gramos - Junior H</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #7b3fbf, #f06292);
+      color: #f3e9f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 5px;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+    h2 {
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      width: 100%;
+      max-width: 700px;
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    .tab-buttons {
+      display: flex;
+      border-bottom: 2px solid #f06292;
+    }
+    .tab-buttons button {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: 15px 0;
+      font-size: 1.1rem;
+      color: #f3e9f5;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .tab-buttons button:hover,
+    .tab-buttons button.active {
+      background: #f06292;
+      font-weight: 700;
+      color: white;
+      box-shadow: inset 0 -4px 0 #7b3fbf;
+    }
+    .tab-content {
+      padding: 20px;
+      color: #f3e9f5;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      background: rgba(0,0,0,0.15);
+      min-height: 450px;
+    }
+    .chord {
+      color: #ffd6e8;
+      font-weight: 700;
+      font-family: monospace;
+      margin-right: 6px;
+    }
+    .chords-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .chords-list li {
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 8px;
+      padding: 10px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .chords-list img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      background: #2a004d;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .tab-buttons button {
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+      .tab-content {
+        font-size: 1rem;
+        min-height: 400px;
+      }
+      .chords-list li {
+        width: 100px;
+      }
+      .chords-list img {
+        max-width: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>160 gramos</h1>
+  <h2>Junior H</h2>
+
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="active" data-tab="letra">Letra</button>
+      <button data-tab="acordes">Acordes</button>
+    </div>
+
+    <div id="letra" class="tab-content">
+<span class="chord">Dm7</span>Siento escalofríos cuando tú me tocas la piel<br>
+<span class="chord">C</span>Tú me erizas por completo, tu sabor a miel<br>
+<span class="chord">Gm</span>Pero, ¿quién es?<br>
+<span class="chord">Am</span>160 gramos deben en lo que corre<br>
+<span class="chord">C</span>Tal vez por eso estás dañada, no entiendo, baby<br>
+<span class="chord">Gm</span>¿Qué tú tienes?<br>
+<span class="chord">Am</span>Me engañabas diciéndome: "Tú eres pa' mí el rey<br>
+<span class="chord">C</span>El que busqué tanto tiempo y al fin encontré"<br>
+<span class="chord">Gm</span>Pero yo sé<br>
+<span class="chord">Am</span>Soy dueño del juego<br><br>
+
+Se te derrumbó porque ella cree que yo no creo en el amor<br>
+Se me confundió, pero está bien<br>
+Perdóname<br>
+Por hacer lo peor<br><br>
+
+Se te derrumbó porque en tus venas corre solo el veneno<br>
+Ya no hay palpitación en ese corazón<br>
+Pero está bien, estaré bien<br>
+Estoy tranquilo porque siempre he hecho las cosas bien<br><br>
+
+Si te lo digo aquí en la cara no es para verte<br>
+Tú ya sabes<br>
+Que en el pasado solo existían dos almas que<br>
+Se enamoraban cada día nomás de tener sed<br><br>
+
+Es el querer<br>
+Soy dueño del juego<br><br>
+
+Se me derrumbó porque ella cree que yo no creo en el amor<br>
+Se me confundió, pero está bien<br>
+Perdóname<br>
+Por hacer lo peor<br><br>
+
+Se te derrumbó porque en tus venas corre solo el veneno<br>
+Ya no hay palpitación en ese corazón<br>
+Pero está bien, estaré bien<br>
+Estaré bien, estaré bien
+    </div>
+
+    <div id="acordes" class="tab-content" style="display:none;">
+      <ul class="chords-list">
+        <li>
+          <img src="img/dm7.jpg" alt="Dm7 acorde" />
+          <strong>Dm7</strong><br>Re menor 7<br>2 tiempos
+        </li>
+        <li>
+          <img src="img/c.jpg" alt="C acorde" />
+          <strong>C</strong><br>Do mayor<br>2 tiempos
+        </li>
+        <li>
+          <img src="img/gm.jpg" alt="Gm acorde" />
+          <strong>Gm</strong><br>Sol menor<br>2 tiempos
+        </li>
+        <li>
+          <img src="img/am.jpg" alt="Am acorde" />
+          <strong>Am</strong><br>La menor<br>2 tiempos
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-buttons button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const tab = btn.getAttribute('data-tab');
+        contents.forEach(content => {
+          content.style.display = content.id === tab ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

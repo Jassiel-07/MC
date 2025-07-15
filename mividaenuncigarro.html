@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Vida En un Cigarro – Junior H</title>
+  <style>
+    body {
+      background-color: #0a1a2a;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffa500;
+      text-shadow: 2px 2px 5px #002244;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffa500;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ffa500;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ffa500;
+      color: #002244;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #002244;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #ffa500;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      color: #e6e6e6;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mi Vida En un Cigarro – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ffa500;">Acordes</h2>
+    <p>Progresión original de la canción (por tiempos):</p>
+    <pre>
+D#m7   (3 tiempos)  
+C#     (2 tiempos)  
+B      (1 tiempo)  
+C#     (1 tiempo)
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">D#m7</p>
+        <img src="img/dsm7.jpg" alt="Acorde D#m7" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">C#</p>
+        <img src="img/cs.jpg" alt="Acorde C#" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">B</p>
+        <img src="img/b.jpg" alt="Acorde B" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#bbb;">
+      Progresión confirmada: D#m7 – C# – B – C# (3-2-1-1 tiempos)
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ffa500;">Letra completa</h2>
+    <pre>
+Voy a prenderme un cigarrito
+Y entre el humo blanco reflejar
+Lo que ha pasado en esta vida
+Altas y bajas no han de faltar
+
+Mi vida en un cigarro vuela
+Al encenderlo te das cuenta
+Que hoy en día una promesa
+No te dura nada ni te espera
+
+Los amigos a mí no me sobran
+Pero más de uno sí me estorba
+Solo uno que otro ha sido bueno
+Firme con los firmes, soy sereno
+
+Los malos pasos en los que anduve
+Pues al principio le batallé
+Con respeto a mi familia
+Miren hasta dónde ya llegué
+
+No olvido a los que me dieron su mano
+En mi mente aquí aún los cargo
+Sé que mal de mí van a hablar
+Sea por envidia o criticar
+
+Yo no me espanto de nada de eso
+Hice mi camino y no hay tropiezo
+El humo blanco me relaja
+Mi mente despejada siempre anda
+
+En nubes de humo yo me muevo
+Ya me paso a retirar
+Ahí nos vemos
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

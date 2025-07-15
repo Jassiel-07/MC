@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jueves 10 – Junior H</title>
+  <style>
+    body {
+      background-color: #0a0f2f;
+      color: #e0e7ff;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #60a5fa;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000a1a;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #60a5fa;
+      margin-bottom: 30px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #a5b4fc;
+      transition: 0.3s;
+    }
+    .tab.active, .tab:hover {
+      background-color: #60a5fa;
+      color: #0a0f2f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      max-width: 700px;
+      margin: auto 0 50px;
+      background-color: #121d5a;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #60a5fa;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #e0e7ff;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .acordes-img {
+      max-width: 140px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #60a5fa;
+    }
+    .acorde-label {
+      text-align: center;
+      margin-top: 8px;
+      color: #a5b4fc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Jueves 10 – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#60a5fa;">Acordes</h2>
+    <pre>
+Em7    1 tiempo
+D      1 tiempo
+Am     2 tiempos
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <img src="img/em7.jpg" alt="Acorde Em7" class="acordes-img" />
+        <p class="acorde-label">Em7</p>
+      </div>
+      <div>
+        <img src="img/d.jpg" alt="Acorde D" class="acordes-img" />
+        <p class="acorde-label">D</p>
+      </div>
+      <div>
+        <img src="img/am.jpg" alt="Acorde Am" class="acordes-img" />
+        <p class="acorde-label">Am</p>
+      </div>
+    </div>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Acordes confirmados por LaCuerda.net y Chordify
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#60a5fa;">Letra con acordes</h2>
+<pre>
+Em7             D                   Am
+Este gallardo hace que me ponga a pensar
+Em7             D                   Am
+Disculpa, mi'ja, esta noche no voy a estar
+Em7             D                   Am
+Un jalón más y el gallardo se empieza a terminar
+Em7             D                   Am
+Con permiso, me tengo que pasar a retirar
+
+Em7             D                   Am
+Mira qué linda estás, eso no se te va a quitar
+Em7             D                   Am
+Me duele verte y saber que eres de alguien más
+Em7             D                   Am
+Un beso en la mejía, Dios te va a cuidar
+Em7             D                   Am
+Yo estaré bien; no te preocupes, nada pasará
+
+Em7             D                   Am
+Me voy, pero recuerda de aquella vez
+Am
+Pero el hubiera ya no existe y no sé por qué
+Em7             D                   Am
+Te acordarás de mí cuando ya estés con él
+Am
+Yo seguiré preguntándome día tras día, ¿por qué?
+
+Em7             D                   Am
+El sol ya se esconde, la noche pronto llegará
+Em7             D                   Am
+La luna solo sabe de esta realidad
+Em7             D                   Am
+El frío duele en los huesos; ¿para qué voy a negar?
+Em7             D                   Am
+Tú eras mi manto entero y ya no tengo na'
+
+Em7             D                   Am
+Mira qué linda estás, tu cara no se va a olvidar
+Em7             D                   Am
+Así como otro corazón a mí me va a extrañar
+Em7             D                   Am
+Que fui dueño de ti, tú también fuiste de mí
+Em7             D                   Am
+Voy a correr de este planeta muy lejos de aquí
+
+Em7             D                   Am
+Me voy, pero recuerda de aquella vez
+Am
+Pero el hubiera ya no existe y no sé por qué
+Em7             D                   Am
+Te acordarás de mí cuando ya estés con él
+Am
+Solo recuerda el día en que te conocí, un jueves 10
+</pre>
+    <p style="font-style: italic; color:#cdd6f4;">
+      Letra y acordes extraídos de LaCuerda.net
+    </p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Intro – Junior H</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #cccccc;
+      text-shadow: 2px 2px 5px #000000;
+    }
+    .tabs {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #888;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ddd;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ddd;
+      color: #111;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #1c1c1c;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #444;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      color: #e0e0e0;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Intro – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#bbb;">Acordes</h2>
+    <p>Progresión usada en toda la canción:</p>
+    <pre>
+Gm   Dm7
+Gm   Dm7
+    </pre>
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center;">Gm</p>
+        <img src="img/gm.jpg" alt="Acorde Gm" class="acordes-img">
+      </div>
+      <div>
+        <p style="text-align:center;">Dm7</p>
+        <img src="img/dm7.jpg" alt="Acorde Dm7" class="acordes-img">
+      </div>
+    </div>
+    <p style="font-size:0.9em; color:#aaa;">
+      Acordes verificados según LaCuerda y Chordify.
+    </p>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#bbb;">Letra con acordes</h2>
+    <pre>
+[Intro]
+Gm               Dm7
+¿Dónde te encuentro?
+Gm
+Si el reloj ya no avanza
+Dm7
+Y aunque lo intento, pero te vuelvo a soñar
+
+Gm               Dm7
+Hay días que siento
+Gm
+Que estás aquí en mi cama
+Dm7
+Me siento enfermo
+
+Gm
+Y no para de llorar
+Dm7
+Mi corazón ya se enfermó
+
+Gm
+Y no para, siento dolor
+Dm7
+Dolor que mata el corazón
+
+Gm   Dm7
+Mi corazón nunca vivió
+
+Gm   Dm7
+¿Dónde nos vemos?
+Gm
+Si ya no quieres hablar
+Dm7
+Y aunque lo intento
+Gm
+Me vuelves a ilusionar
+Dm7
+Dices "no es cierto"
+Gm
+Que si un día yo iba cambiar
+Dm7
+Baby, lo siento
+Gm
+Pero esta vez na' dirá
+Dm7
+Mi corazón ya se enfermó
+
+Gm
+Y no para, siento dolor
+Dm7
+Dolor que mata el corazón
+Gm
+Mi corazón nunca vivió
+Dm7
+Nunca vivió
+Gm
+Nunca vivió
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

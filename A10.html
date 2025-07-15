@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El Velador – Junior H & Marca MP</title>
+  <style>
+    body {
+      background-color: #2f004f;  /* morado oscuro */
+      color: #f8e6f2;             /* rosa claro */
+      font-family: Arial, sans-serif;
+      margin: 0; 
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #f06292;              /* rosa fuerte */
+      text-shadow: 2px 2px 5px #4b2e6f; /* sombra morada */
+    }
+    .tabs {
+      display: flex; 
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #f06292; /* rosa fuerte */
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #f06292;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #f06292;
+      color: #2f004f;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-content {
+      background-color: #4b2e6f; /* morado medio */
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 15px #f06292;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+    .chord {
+      color: #f8c1da;
+      font-weight: 700;
+      font-family: monospace;
+      margin-right: 6px;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #f06292;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>El Velador</h1>
+  <h2 style="text-align:center; color:#f8e6f2; margin-top: -10px; margin-bottom: 30px;">Junior H & Marca MP</h2>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="letra">Letra</button>
+    <button class="tab" data-tab="acordes">Acordes</button>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:block;">
+    <span class="chord">C#</span>Que estarás haciendo,<br>
+    <span class="chord">Bbm</span>tal vez ya estás rendida y cansada.<br>
+    <span class="chord">Fm</span>Y las cortinas en tu cuarto,<br>
+    <span class="chord">C#</span>te están relumbrando, la noche llegando,<br>
+    <span class="chord">Bbm</span>y yo velando el paso.<br>
+    <span class="chord">Fm</span>Y esta noche seré un velador de tu arte,<br>
+    <span class="chord">C#</span>besarte, no será.<br>
+    <span class="chord">Bbm</span>Voy a velar tu cama,<br>
+    <span class="chord">Fm</span>y de hoy hasta mañana voy a ser tu velador.<br>
+    <span class="chord">C#</span>Presencia en tu ventana,<br>
+    <span class="chord">Bbm</span>y ya por la mañana me iré junto con el sol.<br>
+    <span class="chord">Fm</span>Y vendré con la luna y,<br>
+    <span class="chord">C#</span>y de nuevo seré un velador.<br><br>
+
+    <span class="chord">C#</span>Voy a velar tu cama,<br>
+    <span class="chord">Bbm</span>y de hoy hasta mañana voy a ser tu velador.<br>
+    <span class="chord">Fm</span>Presencia en tu ventana,<br>
+    <span class="chord">C#</span>y ya por la mañana me iré junto con el sol.<br>
+    <span class="chord">Bbm</span>Y vendré con la luna y,<br>
+    <span class="chord">Fm</span>y de nuevo seré un velador.
+  </div>
+
+  <div id="acordes" class="tab-content" style="display:none;">
+    <div class="imagenes-container">
+      <div>
+        <p style="text-align:center; color:#f8e6f2;">C#</p>
+        <img src="img/cs.jpg" alt="Acorde C#" class="acordes-img" />
+      </div>
+      <div>
+        <p style="text-align:center; color:#f8e6f2;">Bbm</p>
+        <img src="img/asm.jpg" alt="Acorde A#m" class="acordes-img" />
+      </div>
+      <div>
+        <p style="text-align:center; color:#f8e6f2;">Fm</p>
+        <img src="img/fm.jpg" alt="Acorde Fm" class="acordes-img" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
