@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pa Que Te Duela – Junior H & Eslabón Armado</title>
+  <style>
+    body {
+      background-color: #2a004f;
+      color: #f8e1f4;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+      background-image: url('img/musica.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff6edb;
+      text-shadow: 2px 2px 5px #6b0070;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff6edb;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff6edb;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff6edb;
+      color: #2a004f;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 4px 10px rgba(255,110,219,0.7);
+    }
+    .tab-content {
+      background-color: rgba(107,0,112,0.85);
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 20px #ff6edb;
+      color: #f8e1f4;
+      font-size: 1.1em;
+      white-space: pre-line;
+      line-height: 1.3em;
+      font-family: inherit;
+      overflow-wrap: break-word;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff6edb;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pa Que Te Duela – Junior H & Eslabón Armado</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff6edb;">Acordes</h2>
+    <p>Progresión principal (repite durante toda la canción):</p>
+    <pre>
+Bm (2 tiempos)   D (2 tiempos)   F#m (4 tiempos)
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">Bm</p><img src="img/bm.jpg" alt="Acorde Bm" class="acordes-img"></div>
+      <div><p style="text-align:center;">D</p><img src="img/d.jpg" alt="Acorde D" class="acordes-img"></div>
+      <div><p style="text-align:center;">F#m</p><img src="img/fm.jpg" alt="Acorde F#m" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff6edb;">Letra</h2>
+    <pre>
+Sé dónde quedó tu amor
+Otro me lo quitó
+¿Qué me faltó?
+Querías que fuera más rogón
+Quieres y quieres más
+Voy a estar con otras
+Pero no me quieres
+La neta, enfadado me tienes ya
+Tu novio no asusta
+Traigo el cuerno, él dirá
+Fuck el amor
+Te traigo odiada y así estarás
+En el putero me la paso
+Esta historia de amor fue un fracaso
+Pero se terminó
+No me vengas a rogarme, no
+El alcohol me tiene ondeado
+Ya hasta ando alucinando y puedo estar peor
+Ya mero me quito el dolor
+Pa que te duela
+Pa que te duela
+Pa que te duela
+Pa que te duela
+Uh
+Es Junior H Ma', hay no más
+Puro Eslabón Armado viejo
+Y tú novio no asusta, traigo el cuerno el dirá
+Pa que el amor, te traigo odiada y así estarás
+En el putero me la paso
+Esta historia de amor fue un fracaso
+Pero se terminó, no vengas a rogarme no
+El alcohol me tiene ondeado
+Ya hasta ando alucinando y puedo estar peor
+Ya mero me quito el dolor
+Pa que te duela
+Pa que te duela
+Pa que te duela
+Pa que te duela
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

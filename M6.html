@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cómo Jordan – Junior H</title>
+  <style>
+    body {
+      background-color: #2a004f;
+      color: #f8e1f4;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+      background-image: url('img/musica.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff6edb;
+      text-shadow: 2px 2px 5px #6b0070;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff6edb;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff6edb;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff6edb;
+      color: #2a004f;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 4px 10px rgba(255,110,219,0.7);
+    }
+    .tab-content {
+      background-color: rgba(107,0,112,0.85);
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 20px #ff6edb;
+      color: #f8e1f4;
+      font-size: 1.1em;
+      white-space: pre-line;
+      line-height: 1.3em;
+      font-family: inherit;
+      overflow-wrap: break-word;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff6edb;
+    }
+    .imagenes-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cómo Jordan – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff6edb;">Acordes</h2>
+    <p>Progresión principal (repite durante toda la canción):</p>
+    <pre>
+A   F#m7   C#m   E7      2 tiempos por acorde
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">A</p><img src="img/acordes/A.jpg" alt="Acorde A" class="acordes-img"></div>
+      <div><p style="text-align:center;">F#m7</p><img src="img/acordes/F#m7.jpg" alt="Acorde F#m7" class="acordes-img"></div>
+      <div><p style="text-align:center;">C#m</p><img src="img/acordes/C#m.jpg" alt="Acorde C#m" class="acordes-img"></div>
+      <div><p style="text-align:center;">E7</p><img src="img/acordes/E7.jpg" alt="Acorde E7" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff6edb;">Letra</h2>
+    <pre>
+Viejo lobo en la manada
+En las calles hay cachorros que me han querido topar
+Pero conmigo se pelan, manitas les van a faltar
+Traigan lavada
+Ando como Jordan, en la mano un pelotón y pa variar
+La feria no se acaba pa más morras, que esto va a empezar
+Y que termine
+Cuando falte más dinero pa gastar y pa tirar
+Por mientras este gallo va a prenderse otro pa rolar
+Ya no me duermo gastando el dinero
+Chingando modelos y estoy bien culero
+Hombre, estoy loco y me gusta la feria
+El malnacido que falló en la escuela
+Escucho corridos de puro malandro
+Cadenas gruesas las que ando comprando
+Llenando el hueco que siento por dentro
+Entre placeres se la lleva el viejo
+Compa chuchito
+Uh, uh
+Que no se acabe la feria, viejo
+Junior H
+Quería salir de la cuadra
+Quería ayudar a mi hermana para el poder estudiar
+Ni modo, el viejo lobo, pa, bien pilas se puso a chambear
+Y que termine
+Cuando falte más dinero pa gastar y pa tirar
+Por mientras este gallo va a prenderse otro pa rolar
+Ya no me duermo gastando el dinero
+Chingando modelos y estoy bien culero
+Hombre, estoy loco y me gusta la feria
+El malnacido que falló en la escuela
+Escucho corridos de puro malandro
+Cadenas gruesas las que ando comprando
+Llenando el hueco que siento por dentro
+Entre placeres se la lleva el viejo
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
