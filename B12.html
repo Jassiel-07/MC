@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>B12 – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('img/musica.jpg') center/cover no-repeat fixed;
+      color: #003f3f;
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .tab {
+      padding: 15px 25px;
+      background: #00cc99;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px 20px 0 0;
+      margin: 0 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .tab.active {
+      background: #00b3b3;
+    }
+    .content {
+      display: none;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin: 0 auto 50px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 0 0 20px 20px;
+    }
+    .content.active {
+      display: block;
+    }
+    img.acorde {
+      height: 100px;
+      margin: 10px;
+    }
+    pre {
+      text-align: left;
+      white-space: pre-wrap;
+      font-size: 16px;
+      color: #003f3f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>B12 – Junior H</h1>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab(0)">Acordes</div>
+    <div class="tab" onclick="showTab(1)">Letra</div>
+  </div>
+
+  <div class="content active">
+    <h2>Acordes</h2>
+    <img src="img/F#m.jpg" alt="F#m" class="acorde" />
+    <img src="img/G#m.jpg" alt="G#m" class="acorde" />
+    <img src="img/C#m.jpg" alt="C#m" class="acorde" />
+    <p>Progresión:</p>
+    <pre>
+F#m (1 tiempo) – G#m (1 tiempo) – C#m (2 tiempos)
+    </pre>
+  </div>
+
+  <div class="content">
+    <h2>Letra</h2>
+    <pre>
+La piel rayada de tinta la trae  
+Allá por Nashville, Tennessee él va  
+La gente siempre lo ha de criticar  
+Por una pinta de malandro que hay  
+
+El morro no es dejado, mucho menos menso  
+Se sabe defender y mete las manos al fuego  
+Su carnal El Güerito bien conocido  
+Su carnalito bien sabe, es el consentido  
+
+Qué onda, carnales, buenas tardes, ¿cómo están?  
+Está Javier, él sí que la haría, todos van  
+Ya se llega la nochecita y todos dan  
+Bien tranquilitos, pues ya saben lo que dan  
+
+Me prendo un gallito para comenzar  
+Nos vamos a enfiestar  
+Puro Junior H  
+Se va hasta Nashville, Tennessee  
+Una vez más  
+
+Le vale verga lo que la gente le diga  
+Es respetuoso y siempre al tiro la familia  
+Es la mano derecha de su lindo padre  
+En el negocio Chuy siempre ha hecho bien el jale  
+
+Con unas Dos Equis y una plumita de la wax  
+Nos vamos a enfiestar, ya es noche y la que siga  
+La clica de los demonios siempre aquí está  
+Por siempre al tiro pa enfiestar y pa jalar  
+
+Nos vamos a enfiestar  
+Hasta que el sol salga y ya
+    </pre>
+  </div>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.content');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        contents[i].classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
+</body>
+</html>

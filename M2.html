@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Esta Vida – Junior H</title>
+  <style>
+    body {
+      background-color: #2a004f;
+      color: #f8e1f4;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+      background-image: url('https://theretroprint.com/products/mi-vida-en-un-cigarro-2-album-cover-poster-junior-h');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff6edb;
+      text-shadow: 2px 2px 5px #6b0070;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff6edb;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff6edb;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff6edb;
+      color: #2a004f;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 4px 10px rgba(255,110,219,0.7);
+    }
+    .tab-content {
+      background-color: rgba(107,0,112,0.85);
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 20px #ff6edb;
+      color: #f8e1f4;
+      font-size: 1.1em;
+      line-height: 1.6em;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff6edb;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Esta Vida – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff6edb;">Acordes</h2>
+    <p>Progresión principal (repite toda la canción):</p>
+    <pre>
+C♯m   G♯m   A   G♯m
+    </pre>
+    <div style="display:flex; justify-content:center; gap: 30px; margin-top:20px;">
+      <div><p>C♯m</p><img src="img/csm.jpg" alt="C#m" class="acordes-img"></div>
+      <div><p>G♯m</p><img src="img/gsm.jpg" alt="G#m" class="acordes-img"></div>
+      <div><p>A</p><img src="img/a.jpg" alt="A" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff6edb;">Letra</h2>
+    <pre>
+Griten salud y sigan bebiendo todos
+Que Junior H está tocando en vivo, para él fue todo
+Le mandé a hacer un corrido a ese viejo lobo
+Carnalito, no te olvido, tus hazañas son mi todo
+Carnalito, no te olvido, allá en el cielo, ahí está tu trono
+Dejaste unos angelitos, pronto se volverán toros
+Porque heredaron tu sangre y formarán su modo
+Como en esa tinta negra que clavabas hasta el fondo
+Y disfrutemos de esta vida, que se va
+El whiskyito a mí me pone a recordar
+Si pasé ya de esta vida, fui bien vago
+Y de la vida no me voy a preocupar, así nomás
+Recuerdo cuando te fuiste, ese día se nubló el cielo
+Cayeron relampagazos, en mi corazón el hielo
+Él sabía lo que quería, el legado primero
+Trabajar pa' la familia, siempre se rifaba el cuero
+AMG 63 su carro, para él fue su logro
+El arte de andar rayando fue su vicio que lo forjó
+La humildad ante la gente, siempre muy cerebro
+Hay mucha gente corriente y corrientes tras el dinero
+Ya pasaste de esta vida, carnal, te veremos luego
+Pura mente positiva y tu rostro lo llevo puesto
+Que la tinta no se acabe y que falten los cueros
+Ya pasaste de esta vida, viejo, saludos pa'l cielo
+Disfrutemos de esta vida, que se va
+El whiskyito a mí me pone a recordar
+Si pasé ya de esta vida, fui bien vago
+Y de la vida no me voy a preocupar, así nomás
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

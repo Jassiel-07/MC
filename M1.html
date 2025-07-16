@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Que Siga La Mata Dando – Junior H</title>
+  <style>
+    body {
+      background-color: #2a004f; /* morado oscuro */
+      color: #f8e1f4; /* rosa claro */
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+      background-image: url('https://theretroprint.com/products/mi-vida-en-un-cigarro-2-album-cover-poster-junior-h');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff6edb; /* rosa fuerte */
+      text-shadow: 2px 2px 5px #6b0070;
+    }
+    .tabs {
+      display: flex; 
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff6edb;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff6edb;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff6edb;
+      color: #2a004f;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 4px 10px rgba(255, 110, 219, 0.7);
+    }
+    .tab-content {
+      background-color: rgba(107, 0, 112, 0.85);
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 20px #ff6edb;
+      color: #f8e1f4;
+      font-size: 1.1em;
+      line-height: 1.6em;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+    .acordes {
+      font-weight: bold;
+      color: #ff6edb;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Que Siga La Mata Dando – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff6edb;">Acordes</h2>
+    <p>Progresión principal (cada acorde 2 tiempos):</p>
+    <pre>
+Cm7   Gm
+Cm7   Gm
+    </pre>
+    <div style="display:flex; justify-content:center; gap: 30px; margin-top:20px;">
+      <div>
+        <p style="text-align:center;">Cm7</p>
+        <img src="img/cm7.jpg" alt="Acorde Cm7" style="max-width:160px; border-radius:10px; box-shadow:0 0 15px #ff6edb;" />
+      </div>
+      <div>
+        <p style="text-align:center;">Gm</p>
+        <img src="img/gm.jpg" alt="Acorde Gm" style="max-width:160px; border-radius:10px; box-shadow:0 0 15px #ff6edb;" />
+      </div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff6edb;">Letra</h2>
+    <pre>
+Mientras las matas siguen siempre dando
+Muchos de ustedes están descansando
+Me la navego siempre pa' todos lados
+Pero eso sí, jamás miro pa' abajo
+Pasan los años, tiempos correteando
+Recuerdo ayer loqueando con los vatos
+Éramos felices, no lo miramos
+Pero ni modo de quedar callados
+Pensando en cómo la gente ha cambiado
+Ayer éramos siete, hoy solo cuatro
+Mientras el tiempo va y va bien pasando
+Te miras al espejo y vaya, hay cambios
+Conocerás gente de todos modos
+Unos critican, pero nacen sordos
+Unos te admiran por todos tus logros
+Y créanme que de esos ya hay muy pocos
+Bien dice el corrido "Yo no he cambiado"
+Los pocos que era seguimos intactos
+Pa' esos amigos de todo ha pasado
+Solo los recuerdos siguen pasando
+Un blunt del verde nos vamos rolando
+Los verdaderos no van a negarlo
+Un trago amargo al pecho apretado
+Y brindemos por los que se olvidaron
+Dicen que las matas se siguen dando
+Y aunque no creas, mira, mira bien, vato
+Hay gente corriente por todos lados
+Tienes que cuidarte de los más falsos
+Hoy brindo porque ya murió el pasado
+Y en el futuro no sé pa sigamos
+Si algo aprendí, es que hay amigos contados
+Y siempre que siga la mata dando
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>

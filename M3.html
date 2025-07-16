@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nunca Tristes Siempre Locos – Junior H</title>
+  <style>
+    body {
+      background-color: #2a004f;
+      color: #f8e1f4;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+      background-image: url('https://theretroprint.com/products/mi-vida-en-un-cigarro-2-album-cover-poster-junior-h');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff6edb;
+      text-shadow: 2px 2px 5px #6b0070;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff6edb;
+    }
+    .tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      color: #ff6edb;
+      background: none;
+      border: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background-color: #ff6edb;
+      color: #2a004f;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 4px 10px rgba(255,110,219,0.7);
+    }
+    .tab-content {
+      background-color: rgba(107,0,112,0.85);
+      margin: 0 auto 50px;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 0 20px #ff6edb;
+      color: #f8e1f4;
+      font-size: 1.1em;
+      line-height: 1.6em;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+    .acordes-img {
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff6edb;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nunca Tristes Siempre Locos – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff6edb;">Acordes</h2>
+    <p>Progresión principal (repite toda la canción):</p>
+    <pre>
+F#m   Bm   E   A
+    </pre>
+    <div style="display:flex; justify-content:center; gap:30px; margin-top:20px;">
+      <div><p style="text-align:center;">F#m</p><img src="img/f#_m.jpg" alt="Acorde F#m" class="acordes-img"></div>
+      <div><p style="text-align:center;">Bm</p><img src="img/bm.jpg" alt="Acorde Bm" class="acordes-img"></div>
+      <div><p style="text-align:center;">E</p><img src="img/e.jpg" alt="Acorde E" class="acordes-img"></div>
+      <div><p style="text-align:center;">A</p><img src="img/a.jpg" alt="Acorde A" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff6edb;">Letra</h2>
+    <pre>
+El phone sonó, son cuestiones de trabajo y lo sé,  
+Para chambear, aquí no nos rajamos, jalo,  
+Con una escuadra 50 voy, que no se pase ni un cabrón.
+
+Nunca triste siempre loco,  
+recuerdo a mi carnal el Norks, el Norks, el Norks.
+
+Me ven pasear, ruleteando tranquilo en Las Vegas,  
+historias hay, cuando crecimos de niños, en la Puebla fue donde yo me crié,  
+donde con gente me encliqué, solo diez años tenía yo,  
+pero me sobraba el valor de acción, valor de acción.
+
+Ahí le va compa Norks, al cielo viejo, arriba Las Vegas. Uah!
+
+Pal’ desestrés, nos fuimos para Hidalgo casi un mes,  
+con mi carnal, fiestas y amanecidas, ratos,  
+nunca por la mente imaginé, que muy pronto te iba a perder,  
+en una noche de terror, mi carnal se me accidentó,  
+adiós, al Norks, marchó.
+
+Para brincar, mi primo Richard, Julio y Corcochas,  
+no han de rajar, comprobado me quedó de su lealtad.
+
+Una jersey negra siempre voy,  
+cada que quiero tirar roll,  
+una banda norteño estoy,  
+hasta que se nos salga el sol, salió. ¡Eah!
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
