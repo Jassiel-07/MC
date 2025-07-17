@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Número 7 – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .tab {
+      padding: 12px 30px;
+      cursor: pointer;
+      background-color: #00c292;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      margin: 0 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .tab.active {
+      background-color: #00b0ff;
+    }
+    .content {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .hidden {
+      display: none;
+    }
+    img.acorde {
+      height: 100px;
+      margin-right: 10px;
+    }
+    .acordes-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+  <script>
+    function mostrar(tab) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById('tab-acordes').classList.remove('active');
+      document.getElementById('tab-letra').classList.remove('active');
+
+      document.getElementById(tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" id="tab-acordes" onclick="mostrar('acordes')">Acordes</div>
+    <div class="tab" id="tab-letra" onclick="mostrar('letra')">Letra</div>
+  </div>
+
+  <div class="content" id="acordes">
+    <div class="acordes-img">
+      <img src="img/Ebm.jpg" alt="Ebm" class="acorde">
+      <img src="img/Bbm.jpg" alt="Bbm" class="acorde">
+      <img src="img/Abm.jpg" alt="Abm" class="acorde">
+    </div>
+    <pre>
+Progresión:
+Ebm – Bbm – Abm – Bbm (repite)
+
+Estilo: Requinto melódico / tempo medio
+    </pre>
+  </div>
+
+  <div class="content hidden" id="letra">
+    <pre>
+No es lo mismo llamar al león  
+que mirarlo llegar  
+Bien imponente su mirada,  
+se le mira el mal  
+
+Es el talento que su padre  
+a él siempre le fue a dar  
+
+Encostalaba mota  
+y cortaba la amapola  
+Pa' vender el dulcecito  
+pa' los chaca'  
+
+Luego cocinaba la lavada  
+para el cuadro enrollar  
+
+Mi jefe plantitas era las  
+que daban las parcelas 'tabán retacadas  
+para hacer medicina  
+
+De ahí fui avanzando  
+y bendiciones fueron a llegar  
+Brinqué aquel charco  
+y mi familia vino a prosperar  
+
+Aquel viejón se adelantó,  
+del cielo me cuida  
+La herencia activa,  
+todavía yo soy el que manda  
+
+Ahora me surro la vida  
+y el dinero me escurre  
+por todo el puto cuerpo  
+Voy por todo y quiero más  
+
+Aguililla y buzo,  
+siempre como el hueso  
+Siempre al tiro  
+como me enseñó aquel viejo  
+Puro pa' dela  
+
+Ahí le va al número seven  
+Y al siete mayor, viejo, puro Junior H, uah  
+
+Las carencias no se me olvida,  
+fue felicidad  
+Cómo olvidarme  
+de Francisco y de mi primo Adrián  
+
+Siguen los fletes circulando,  
+la envidia no para  
+Invernaderos y terrenos,  
+saben mover lana  
+
+Un siete al pecho,  
+diamonds negros en su pecho van  
+Así es la línea, sigue viva,  
+la representa  
+
+Bien poderoso y orgulloso,  
+placoso de más  
+Abran camino porque  
+el Siete al party va a llegar  
+
+Pa' vender el dulcecito  
+pa' los chacas  
+Luego cocinaba la lavada  
+para el cuadro enrollar  
+Mi jefe plantitas era las que daban...  
+Ahora me surro la vida  
+y el dinero me escurre  
+Voy por todo y quiero más  
+Aguililla y buzo...  
+Siempre puro pa' dela
+    </pre>
+  </div>
+</body>
+</html>

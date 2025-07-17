@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Una Navaja – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .tab {
+      padding: 12px 30px;
+      cursor: pointer;
+      background-color: #00c292;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      margin: 0 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .tab.active {
+      background-color: #00b0ff;
+    }
+    .content {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .hidden {
+      display: none;
+    }
+    img.acorde {
+      height: 100px;
+      margin-right: 10px;
+    }
+    .acordes-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+  <script>
+    function mostrar(tab) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById('tab-acordes').classList.remove('active');
+      document.getElementById('tab-letra').classList.remove('active');
+
+      document.getElementById(tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" id="tab-acordes" onclick="mostrar('acordes')">Acordes</div>
+    <div class="tab" id="tab-letra" onclick="mostrar('letra')">Letra</div>
+  </div>
+
+  <div class="content" id="acordes">
+    <div class="acordes-img">
+      <img src="img/Gm7.jpg" alt="Gm7" class="acorde">
+      <img src="img/Dm7.jpg" alt="Dm7" class="acorde">
+      <img src="img/F7.jpg" alt="F7" class="acorde">
+    </div>
+    <pre>
+Progresión:
+Gm – Dm7 – F – Dm7 (repite)
+
+Estilo: Corrido tumbado / tempo moderado
+    </pre>
+  </div>
+
+  <div class="content hidden" id="letra">
+    <pre>
+
+Todos sufrimos por dentro
+Todos cargamos recuerdos, que la vida nos dio
+De mi madre los consejos
+Que al Nevarez enseñó y en su pecho guardó
+
+Viví entre barrios, recuerdo
+Fue dura la situación, y así me tocó
+Joven, discreto y sereno
+Tuve mucha protección y así les cuento
+
+Una navaja
+Que me acompaña, protección
+La moneda baila
+Y no sabes cuál cara te tocó
+
+Una Cherokee subiendo
+Allá, en Palatine, se vio, jalando el motor
+Dos J's para conocerlo
+Hombre de motivación, que rifa todo
+
+Pa' ser hombres el respeto
+Se gana con los huevos y te hace cabrón
+Pendiente, el vato está puesto
+Y no se anda con juego
+
+Una navaja
+Que me acompaña, proteccion
+La moneda baila
+Y no sabes cuál cara te tocó
+    </pre>
+  </div>
+</body>
+</html>

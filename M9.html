@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Extssy Model – Junior H</title>
+  <style>
+    body {
+      background-color: #2a004f;
+      color: #f8e1f4;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0 20px;
+      background-image: url('img/musica.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    h1 { text-align:center; margin-top:30px; color:#ff6edb; text-shadow:2px 2px 5px #6b0070; }
+    .tabs { display:flex; justify-content:center; margin-top:30px; border-bottom:2px solid #ff6edb; }
+    .tab { padding:12px 25px; cursor:pointer; color:#ff6edb; background:none; border:none; font-size:1.1em; font-weight:bold; transition:0.3s; }
+    .tab:hover, .tab.active { background:#ff6edb; color:#2a004f; border-radius:5px 5px 0 0; box-shadow:0 4px 10px rgba(255,110,219,0.7); }
+    .tab-content { background:rgba(107,0,112,0.85); margin:0 auto 50px; max-width:700px; padding:20px; border-radius:0 10px 10px 10px; box-shadow:0 0 20px #ff6edb; color:#f8e1f4; font-size:1.1em; line-height:1.5em; overflow-wrap:break-word; white-space:pre-wrap; }
+    .acordes-img { max-width:160px; border-radius:10px; box-shadow:0 0 15px #ff6edb; }
+    .imagenes-container { display:flex; justify-content:center; gap:30px; margin-top:20px; flex-wrap:wrap; }
+    pre { white-space:pre-wrap; font-family:inherit; }
+  </style>
+</head>
+<body>
+
+  <h1>Extssy Model – Junior H</h1>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="acordes">Acordes</button>
+    <button class="tab" data-tab="letra">Letra</button>
+  </div>
+
+  <div id="acordes" class="tab-content">
+    <h2 style="color:#ff6edb;">Acordes y Requinto</h2>
+    <p>Estos son los acordes principales que aparecen en la canción:</p>
+    <pre>
+Intro / Solo:
+F#m7  Fm7  Em7  Am  D  G  Bm
+
+Verso / Coro:
+Em7  Am  D  G  Bm
+    </pre>
+    <div class="imagenes-container">
+      <div><p style="text-align:center;">Em7</p><img src="img/acordes/Em7.jpg" alt="Acorde Em7" class="acordes-img"></div>
+      <div><p style="text-align:center;">Am</p><img src="img/acordes/Am.jpg" alt="Acorde Am" class="acordes-img"></div>
+      <div><p style="text-align:center;">D</p><img src="img/acordes/D.jpg" alt="Acorde D" class="acordes-img"></div>
+      <div><p style="text-align:center;">G</p><img src="img/acordes/G.jpg" alt="Acorde G" class="acordes-img"></div>
+      <div><p style="text-align:center;">Bm</p><img src="img/acordes/Bm.jpg" alt="Acorde Bm" class="acordes-img"></div>
+    </div>
+  </div>
+
+  <div id="letra" class="tab-content" style="display:none;">
+    <h2 style="color:#ff6edb;">Letra con acordes</h2>
+    <pre>
+Intro/Solo:
+F#m7  Fm7  Em7  Am  D  G  Bm
+
+Verso 1:
+Em7                Am
+La miré pasar, fue a paralizar
+      D
+El tiempo a mi lado se hacía más lento
+      G               Bm
+Y yo viendo tu rostro me entraron recuerdos
+
+Em7                Am
+Qué casualidad, te veo por acá
+      D
+Juré que jamás volvería a pensarte
+      G                Bm
+Pero creo que es tarde, me volví un cobarde
+
+Verso 2:
+Em7                Am
+Y ahora estás aquí, fue el destino gris
+      D
+Tú y yo no cabemos en un mismo infierno
+      G              Bm
+Así que prefiero largarme muy lejos
+
+Coro:
+Em7                Am
+Y llega la noche, eh, me llega el reproche, eh
+      D
+Móntate en el coche, quítate ese broche
+      G                   Bm
+Soy tuyo esta noche y tú mi Extssy Model
+
+Em7                Am
+Me llevas al cielo, oh, que hasta tengo miedo, oh
+      D
+De caer de nuevo, enredarme en tu cuerpo
+      G                   Bm
+Mi alma está vacía, pero estoy sonriendo
+
+(Repite la progresión Em7-Am-D-G-Bm mientras continúan los versos:)
+¿Piensas tú en mí como yo en ti?
+...
+    </pre>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
