@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Empresa Fly Club – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .tabs { display: flex; justify-content: center; margin-top: 20px; }
+    .tab {
+      padding: 12px 30px;
+      cursor: pointer;
+      background-color: #00c292;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      margin: 0 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .tab.active { background-color: #00b0ff; }
+    .content {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .hidden { display: none; }
+    img.acorde { height: 100px; margin-right: 10px; }
+    .acordes-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+  </style>
+  <script>
+    function mostrar(tab) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById('tab-acordes').classList.remove('active');
+      document.getElementById('tab-letra').classList.remove('active');
+      document.getElementById(tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" id="tab-acordes" onclick="mostrar('acordes')">Acordes</div>
+    <div class="tab" id="tab-letra" onclick="mostrar('letra')">Letra</div>
+  </div>
+
+  <div class="content" id="acordes">
+    <div class="acordes-img">
+      <img src="img/Am.jpg" alt="Am" class="acorde">
+      <img src="img/Dm.jpg" alt="Dm" class="acorde">
+    </div>
+    <pre>
+Progresión base (se repite en toda la canción):
+Am – Dm  (x4 intro, luego siempre sobre esta base)
+
+Estilo: corrido tumbado, tempo moderado 2
+    </pre>
+  </div>
+
+  <div class="content hidden" id="letra">
+    <pre>
+[Intro]  (x4)
+Am  Dm
+
+[Verso 1]
+Am              Dm
+Crecen las matas
+Am              Dm
+Seguimos vendiendo
+Am                  Dm
+Apostamos y así el dado cayó en el centro
+Am             Dm
+De acá de arriba yo todo lo veo
+Am                Dm
+Prendió la mecha y controlamos el terreno
+Am                Dm
+Convoy de milicia, aquí están capacitados
+Am                Dm
+Cuando los vean zumbar la perla, amigazos
+Am               Dm
+Porte empresario, bajo el agua no la navegamos
+Am             Dm
+Son cachanilla’; pa’ los R, saludazos
+Am                  Dm
+Que con sudor de frente el puesto han ganado
+Am               Dm
+En poco tiempo controlamos el mercado
+Am             Dm
+Pura vitamina la miel que sacamos
+Am                 Dm
+El dispensario que pegó, y no en el gabacho
+Am              Dm
+Para alivianarla un Galaxy en la mano
+Am                 Dm
+Y entre los dedos que no falte un pinche gallo
+
+[Puente]
+Am              Dm
+Préndase otro, préndase otro
+Am                          Dm
+Pero que sea de Fly Club, viejo
+Am              Dm
+Puro Junior H
+Am             Dm
+Crecen las ganas, seguimos en esto
+Am              Dm
+Contamos pacas, ahora sale para el queso
+
+...
+
+[Estribillo / Cierre]
+Am                  Dm
+Empresa Fly Club sigue rifando pa’ rato
+    </pre>
+  </div>
+</body>
+</html>

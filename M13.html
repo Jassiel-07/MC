@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El Nene – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .tab {
+      padding: 12px 30px;
+      cursor: pointer;
+      background-color: #00c292;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      margin: 0 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .tab.active {
+      background-color: #00b0ff;
+    }
+    .content {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .hidden {
+      display: none;
+    }
+    img.acorde {
+      height: 100px;
+      margin-right: 10px;
+    }
+    .acordes-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+  <script>
+    function mostrar(tab) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById('tab-acordes').classList.remove('active');
+      document.getElementById('tab-letra').classList.remove('active');
+
+      document.getElementById(tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" id="tab-acordes" onclick="mostrar('acordes')">Acordes</div>
+    <div class="tab" id="tab-letra" onclick="mostrar('letra')">Letra</div>
+  </div>
+
+  <div class="content" id="acordes">
+    <div class="acordes-img">
+      <img src="img/G.jpg" alt="G" class="acorde">
+      <img src="img/A.jpg" alt="A" class="acorde">
+      <img src="img/F#m.jpg" alt="F#m" class="acorde">
+      <img src="img/Bm.jpg" alt="Bm" class="acorde">
+    </div>
+    <pre>
+Progresión (repite toda la canción):
+G – A – F#m – Bm
+
+Tempo: moderado, típico de corrido tumbado
+    </pre>
+  </div>
+
+  <div class="content hidden" id="letra">
+    <pre>
+[Intro]
+G A F#m Bm  (x3)
+
+[Verso 1]
+G           A
+Una probada de mi sangre
+F#m                Bm
+Y en cuanto la prueban se mueren
+G           A
+Como un veneno incomparable
+F#m             Bm
+Sangre del apellido Vélez
+
+G           A
+¿Cómo olvidar aquella tarde?
+F#m              Bm
+Cuando por poco pierdo al nene
+G           A
+No se alcanzaba a ver quién viene
+F#m               Bm
+De pronto llega una Cheyenne
+
+G           A
+Llegan los impactos por el vidrio
+   F#m               Bm
+De mi troca Super Duty
+G           A
+Y pa’l suelo me aventaba
+   F#m              Bm
+De lejos eran detonaciones
+
+G           A
+Parecía Call of Duty
+   F#m             Bm
+Mi vida yo repasaba
+G           A
+No se alcanzaba a ver quién viene
+   F#m             Bm
+Al nene yo por más buscaba
+
+G           A
+No miró por la polvadera
+   F#m              Bm
+La nueve ya no tiene balas
+G           A
+Mi vida pasando y en mi mano
+   F#m            Bm
+Mi rosario que colgaba
+
+G           A
+La muerte ya me llamaba
+   F#m               Bm
+Cuatro impactos de un cuerno rameado
+G           A
+Mis ojos se reflejaban
+   F#m             Bm
+La vida a mí me salvaban
+
+G           A
+Era un viejón incomparable
+   F#m             Bm
+El nene con fija mirada
+G           A
+Casi nos chacalean, pariente
+   F#m                 Bm
+Pero la verga nos pelaban
+
+G           A
+Quemamos cartucho y pa’ las lomas
+   F#m              Bm
+La Super Duty en catiza
+G           E
+Como RZR entre polvo y dunas
+   F#m             Bm
+El Nene se me desangraba
+
+[Verso 2 – misma progresión]
+Nadie me puede dar respuesta
+Las horas pasan, nada saben
+Mil cosas van por mi cabeza
+Por saber qué pasa, compadre
+
+Denme un minuto para hablarle
+Y a ver si escucha a quien le reza
+Creo que me despido, compadre
+Con voz quebrada a mí me expresa
+
+Puede que hasta aquí llegue mi nombre
+Anda, dile a mi viejita que me fui
+Y que ya no hay vuelta
+Te dejo ese cuernito rameado
+
+Pa’ que peines bien la sierra
+Y me cuides a la Imelda
+En la fila de aquella sierra
+Descansan dos tumbas con sangre
+
+Tú supiste darles pelea
+¿Cómo devolverte, compadre?
+Prometo peinar toda la sierra
+Y levantar esa casita
+
+Que tanto tú le perreaste
+Nos vemos a la vuelta de esquina
+Cuando las palomas vuelen
+Lucharé lo que soñaste
+    </pre>
+  </div>
+</body>
+</html>

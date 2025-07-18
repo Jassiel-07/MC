@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nací para Amarte – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .tab {
+      padding: 15px 30px;
+      background: #00cc99;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px #00000066;
+    }
+    .tab:hover {
+      background: #00b386;
+    }
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 20px #00000088;
+    }
+    .hidden {
+      display: none;
+    }
+    .chord-img {
+      width: 100px;
+      margin: 10px;
+    }
+    .chords-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab" onclick="showTab('acordes')">Acordes</div>
+    <div class="tab" onclick="showTab('letra')">Letra</div>
+  </div>
+
+  <div id="acordes" class="content">
+    <h2>Acordes</h2>
+    <div class="chords-group">
+      <img src="img/gsm.jpg" alt="G#m" class="chord-img">
+      <img src="img/asm.jpg" alt="A#m" class="chord-img">
+      <img src="img/am.jpg" alt="Am" class="chord-img">
+    </div>
+    <p><strong>Ritmo:</strong> 4/4</p>
+    <p><strong>Progresión:</strong> G#m (2 tiempos), A#m (1 tiempo), Am (1 tiempo)</p>
+  </div>
+
+  <div id="letra" class="content hidden">
+    <h2>Letra con Acordes</h2>
+    <pre>
+Qué difícil es partir la cama en dos
+Hay una presión que se acerca y me dice
+Que la bese, que lo intente
+ Curar el dolor
+ Yo todo lo sé
+ Cuando no estás bien
+La nube que te estorba está enorme y no tarda en llover
+Y quiero saber
+Qué vamos a hacer
+Si hay algo que se muera, bebé, que sea por fa' el reloj
+
+¿Qué tienen tus ojos?
+ ¿Qué tiene tus manos
+ Que no me tocan?
+Como en las noches
+Todas esas caricias
+ Que me llenan de vida
+ Nací para amarte
+ Nací para amarte
+
+¿Qué tienen tus ojos?
+¿Qué tienen tus labios
+Que no me besan?
+Cómo te adueñas
+De todos mis sentidos
+ Tú, el que más necesito
+ Nací para amarte
+[ Nací para amarte
+
+Tengo tantas ganas de que tu olor
+ Se mezcle conmigo
+Con mi piel y tu piel
+De tenerte, de comerte
+De hacerte el amor
+Prefiero no ser
+Ganar o perder
+
+ Si supieras cómo me la paso checándome el phone
+¿Qué vamos a hacer?
+ Te quiero tener
+si algo que no muera, bebé, que sea por fa' el amor
+
+¿Qué tienen tus ojos?
+¿Qué tiene tus manos
+ Que no me tocan?
+ Como en las noches
+Todas esas caricias
+ Que me llenan de vida
+ Nací para amarte
+ Nací para amarte
+
+¿Qué tienen tus ojos?
+ ¿Qué tienen tus labios
+ Que no me besan?
+Cómo te adueñas
+De todos mis sentidos
+ Tú, el que más necesito
+ Nací para amarte
+ Nací para amarte
+    </pre>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

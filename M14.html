@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El Pelos – Junior H ft. Jr Torres | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .tabs { display: flex; justify-content: center; margin-top: 20px; }
+    .tab {
+      padding: 12px 30px;
+      cursor: pointer;
+      background-color: #00c292;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      margin: 0 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .tab.active { background-color: #00b0ff; }
+    .content {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 0 0 10px 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .hidden { display: none; }
+    img.acorde { height: 100px; margin-right: 10px; }
+    .acordes-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+  </style>
+  <script>
+    function mostrar(tab) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById('tab-acordes').classList.remove('active');
+      document.getElementById('tab-letra').classList.remove('active');
+      document.getElementById(tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" id="tab-acordes" onclick="mostrar('acordes')">Acordes</div>
+    <div class="tab" id="tab-letra" onclick="mostrar('letra')">Letra</div>
+  </div>
+
+  <div class="content" id="acordes">
+    <div class="acordes-img">
+      <img src="img/A.jpg" alt="A" class="acorde">
+      <img src="img/Csharp7.jpg" alt="C#7" class="acorde">
+      <img src="img/Fsharpm.jpg" alt="F#m" class="acorde">
+      <img src="img/E.jpg" alt="E" class="acorde">
+    </div>
+    <pre>
+Progresión (base de toda la canción, se repite):
+A – C#7 – F#m – E
+
+Interpretación: ritmo corrido tumbado, tempo moderado 1
+    </pre>
+  </div>
+
+  <div class="content hidden" id="letra">
+    <pre>
+[Intro] (x2)
+A  C#7  F#m  E
+
+[Verso 1]
+A           C#7         F#m
+Compa, pásame ese cigarro
+E             A
+Miro un carro extraño
+C#7               F#m  E
+Y tres vatos con maldad
+A              C#7         F#m
+Porque me acuerdo hace algunos años
+E            A
+Ya me los había topado
+C#7              F#m  E
+Hasta les di mi amistad
+A          C#7        F#m
+Llegaron tirándome balazos
+E            A
+Los cabrones enojados
+C#7             F#m  E
+Porque no me podían dar
+A         C#7         F#m
+Ya con un balazo en la pierna
+E              A
+Y rodando desde el suelo
+C#7         F#m  E
+Les empecé a disparar
+A          C#7       F#m
+Nunca de nadie me he dejado
+E            A
+Nació el Pelos batalloso
+C#7         F#m      E
+Y le vamos a atorar
+
+[Intro]
+...
+
+(Y así sigue la canción completa)
+    </pre>
+  </div>
+</body>
+</html>

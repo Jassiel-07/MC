@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Navego Al Modo – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .tab {
+      padding: 15px 30px;
+      background: #00cc99;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px #00000066;
+    }
+    .tab:hover {
+      background: #00b386;
+    }
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 20px #00000088;
+    }
+    .hidden {
+      display: none;
+    }
+    .chords-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .chord-box {
+      text-align: center;
+    }
+    .chord-img {
+      width: 100px;
+      margin-bottom: 5px;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab" onclick="showTab('acordes')">Acordes</div>
+    <div class="tab" onclick="showTab('letra')">Letra</div>
+  </div>
+
+  <div id="acordes" class="content">
+    <h2>Acordes</h2>
+    <div class="chords-group">
+      <div class="chord-box">
+        <img src="img/acordes/fsharpm7.jpg" alt="Acorde F#m7" class="chord-img">
+        <p>F#m7</p>
+      </div>
+      <div class="chord-box">
+        <img src="img/acordes/gsharpm7.jpg" alt="Acorde G#m7" class="chord-img">
+        <p>G#m7</p>
+      </div>
+      <div class="chord-box">
+        <img src="img/acordes/csharm7.jpg" alt="Acorde C#m7" class="chord-img">
+        <p>C#m7</p>
+      </div>
+      <div class="chord-box">
+        <img src="img/acordes/csharpm.jpg" alt="Acorde C#m" class="chord-img">
+        <p>C#m</p>
+      </div>
+    </div>
+    <p><strong>Ritmo:</strong> 4/4</p>
+    <p><strong>Progresión:</strong> F#m7 – G#m7 – C#m7 – C#m</p>
+  </div>
+
+  <div id="letra" class="content hidden">
+    <h2>Letra</h2>
+    <pre>
+La vida recia sé que pronto me va a llevar
+Pero mientras, claro que yo la voy a disfrutar
+Fanta de piña y Prometazine para ladear
+Se inyecta la adrenalina cuando voy acelerar
+
+La ondeada reventó, ya se ameritaba
+Morritas nuevas encargué, se bañan con champaña
+Compa Dani y Gabi en el refuego me acompañan
+Con corridos y loquera prendida está la plebada
+
+Dinero recio es lo que me aliviana
+Socios llegan con la marihuana
+Una gorra de Gorilla tapa la mirada
+Prendemos la medicina, esa nunca se acaba
+
+Al tiro por las calles del Mariano siempre
+La movida es propia, ya no hay a quién deberle
+La navego al modo, soda escurre el lodo
+Carga power el morro pa’ controlar sus territorios
+
+Me preguntan que si le atoro, y yo digo, “Simón”
+Pa’ la maña aquí en Tijuana escuela agarré yo
+Al primo Luis hasta Sonora le va un saludón
+Y a la plebada bélica que navega en convoy
+
+Morras tengo varias, pero quieren la feria
+Las desafano si en las redes se me manguerean
+La neta no tengo amor todas resultan falsas
+Correteo la bolsa, me enamoré, pero de las pacas
+
+Dinero recio es lo que me aliviana
+Socios llegan con la marihuana
+Una gorra de Gorilla tapa la mirada
+Prendemos la medicina, esa nunca se acaba
+
+Al tiro por las calles del Mariano siempre
+La movida es propia, no hay a quién deberle
+La navego al modo, soda escurre el lodo
+Carga power el morro pa’ controlar sus territorios
+    </pre>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

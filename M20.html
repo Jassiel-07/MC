@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Qué Hay Que Hacer – Junior H | Acordes y Letra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('img/musica.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .tab {
+      padding: 15px 30px;
+      background: #00cc99;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px #00000066;
+    }
+    .tab:hover {
+      background: #00b386;
+    }
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 20px #00000088;
+    }
+    .hidden {
+      display: none;
+    }
+    .chords-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .chord-box {
+      text-align: center;
+    }
+    .chord-img {
+      width: 100px;
+      margin-bottom: 5px;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab" onclick="showTab('acordes')">Acordes</div>
+    <div class="tab" onclick="showTab('letra')">Letra</div>
+  </div>
+
+  <div id="acordes" class="content">
+    <h2>Acordes</h2>
+    <div class="chords-group">
+      <div class="chord-box">
+        <img src="img/acordes/fm7.jpg" alt="Acorde Fm7" class="chord-img">
+        <p>Fm7</p>
+      </div>
+      <div class="chord-box">
+        <img src="img/acordes/cm.jpg" alt="Acorde Cm" class="chord-img">
+        <p>Cm</p>
+      </div>
+      <div class="chord-box">
+        <img src="img/acordes/ebm.jpg" alt="Acorde Ebm" class="chord-img">
+        <p>Ebm</p>
+      </div>
+    </div>
+    <p><strong>Ritmo:</strong> 4/4</p>
+    <p><strong>Progresión:</strong> Fm7 – Cm – Ebm</p>
+  </div>
+
+  <div id="letra" class="content hidden">
+    <h2>Letra</h2>
+    <pre>
+¿Qué hay que hacer?  
+Pura morrita de arriba de 100k,  
+Pa' que estén bailando la de 4K,  
+Mientras entre el monte descargo el AK,  
+2032 y sobreviví, apá,  
+Mis enemigos, la neta, ya no están,  
+100 formas distintas de mandarlos más allá,  
+Carros y dinero, llegan solas las damas.
+
+Ni todo el dinero, pa',  
+Puede detener balas,  
+Soy un perro pa' las perras,  
+Pa'l gobierno, un puto criminal,  
+Póngase la ve*** atrás,  
+Traigo una rubia y una morena,  
+Que me ayuda relajar, y pa' volar,
+
+Préndase otro, préndase otro.
+
+Me pegué, un lineón de "P" en las "B's" de una princess,  
+De la inalcanzable del Insta, bebé,  
+No pidió dinero, pero le gusté,  
+La mojé de espuma de una Ace of Spades,  
+Mi Uber es un Challenger SRT,  
+Y atrás caravanas de mi clika shit,  
+Nos vamos pa'l after hasta amanecer.
+
+Ni todo el dinero, pa',  
+Puede detener balas,  
+Soy un perro pa' las perras,  
+Pa'l gobierno, un puto criminal,  
+Póngase la ve*** atrás,  
+Traigo una rubia y una morena,  
+Que me ayuda relajar, y pa' volar,
+    </pre>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('acordes').classList.add('hidden');
+      document.getElementById('letra').classList.add('hidden');
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
